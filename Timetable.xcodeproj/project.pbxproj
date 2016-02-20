@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F701B33626C08EBE80725F3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */; };
 		410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3C91C788E2600E49CB9 /* AppDelegate.swift */; };
-		410BE3CC1C788E2600E49CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3CB1C788E2600E49CB9 /* ViewController.swift */; };
+		410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */; };
 		410BE3CF1C788E2600E49CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410BE3CD1C788E2600E49CB9 /* Main.storyboard */; };
 		410BE3D11C788E2600E49CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410BE3D01C788E2600E49CB9 /* Assets.xcassets */; };
 		410BE3D41C788E2600E49CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410BE3D21C788E2600E49CB9 /* LaunchScreen.storyboard */; };
-		7F9D94001A901FC262984EC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A39BEB351CF57A2D521995D9 /* libPods.a */; };
+		410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3DC1C78965C00E49CB9 /* Globals.swift */; };
+		410BE3DF1C78A6E400E49CB9 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3DE1C78A6E400E49CB9 /* Timetable.swift */; };
+		410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E01C78A6FF00E49CB9 /* TTDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,16 @@
 		3270AF72959F76F37F896B19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		410BE3C61C788E2500E49CB9 /* Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		410BE3C91C788E2600E49CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		410BE3CB1C788E2600E49CB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		410BE3CE1C788E2600E49CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		410BE3D01C788E2600E49CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		410BE3D31C788E2600E49CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		410BE3D51C788E2600E49CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A39BEB351CF57A2D521995D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimetableBridgingHeader.h; sourceTree = "<group>"; };
+		410BE3DC1C78965C00E49CB9 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		410BE3DE1C78A6E400E49CB9 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
+		410BE3E01C78A6FF00E49CB9 /* TTDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDB.swift; sourceTree = "<group>"; };
+		B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9D94001A901FC262984EC7 /* libPods.a in Frameworks */,
+				1F701B33626C08EBE80725F3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,20 +68,32 @@
 		410BE3C81C788E2500E49CB9 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				410BE3E21C78A70700E49CB9 /* DB */,
 				410BE3C91C788E2600E49CB9 /* AppDelegate.swift */,
-				410BE3CB1C788E2600E49CB9 /* ViewController.swift */,
+				410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */,
 				410BE3CD1C788E2600E49CB9 /* Main.storyboard */,
 				410BE3D01C788E2600E49CB9 /* Assets.xcassets */,
 				410BE3D21C788E2600E49CB9 /* LaunchScreen.storyboard */,
 				410BE3D51C788E2600E49CB9 /* Info.plist */,
+				410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */,
+				410BE3DC1C78965C00E49CB9 /* Globals.swift */,
 			);
 			path = Timetable;
+			sourceTree = "<group>";
+		};
+		410BE3E21C78A70700E49CB9 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				410BE3DE1C78A6E400E49CB9 /* Timetable.swift */,
+				410BE3E01C78A6FF00E49CB9 /* TTDB.swift */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 		92D1CC71505B6126E3BD676E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A39BEB351CF57A2D521995D9 /* libPods.a */,
+				B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				410BE3CC1C788E2600E49CB9 /* ViewController.swift in Sources */,
+				410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */,
+				410BE3DF1C78A6E400E49CB9 /* Timetable.swift in Sources */,
 				410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */,
+				410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */,
+				410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +299,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Timetable/TimetableBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,6 +338,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Timetable/TimetableBridgingHeader.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

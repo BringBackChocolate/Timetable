@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A1EC636C1F4CD1195FBCB656'
-               BlueprintName = 'MSCollectionViewCalendarLayout'
+               BlueprintIdentifier = '042CCA25B68F7063735C39D3'
+               BlueprintName = 'EPCalendarPicker'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'MSCollectionViewCalendarLayout.framework'>
+               BuildableName = 'EPCalendarPicker.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
