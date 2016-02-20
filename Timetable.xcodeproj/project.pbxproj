@@ -14,8 +14,17 @@
 		410BE3D11C788E2600E49CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410BE3D01C788E2600E49CB9 /* Assets.xcassets */; };
 		410BE3D41C788E2600E49CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410BE3D21C788E2600E49CB9 /* LaunchScreen.storyboard */; };
 		410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3DC1C78965C00E49CB9 /* Globals.swift */; };
-		410BE3DF1C78A6E400E49CB9 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3DE1C78A6E400E49CB9 /* Timetable.swift */; };
 		410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E01C78A6FF00E49CB9 /* TTDB.swift */; };
+		410BE3E41C78B90100E49CB9 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E31C78B90100E49CB9 /* CalendarController.swift */; };
+		410BE3E61C78BB1300E49CB9 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E51C78BB1300E49CB9 /* JSON.swift */; };
+		410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E71C78C19200E49CB9 /* Faculty.swift */; };
+		410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E91C78C3A400E49CB9 /* Group.swift */; };
+		410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */; };
+		410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3ED1C78CD5F00E49CB9 /* Week.swift */; };
+		410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3EF1C78CF4E00E49CB9 /* Day.swift */; };
+		410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F11C78CF9A00E49CB9 /* Lesson.swift */; };
+		410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F31C78D58100E49CB9 /* Extensions.swift */; };
+		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +39,17 @@
 		410BE3D51C788E2600E49CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimetableBridgingHeader.h; sourceTree = "<group>"; };
 		410BE3DC1C78965C00E49CB9 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		410BE3DE1C78A6E400E49CB9 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
 		410BE3E01C78A6FF00E49CB9 /* TTDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDB.swift; sourceTree = "<group>"; };
+		410BE3E31C78B90100E49CB9 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		410BE3E51C78BB1300E49CB9 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		410BE3E71C78C19200E49CB9 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		410BE3E91C78C3A400E49CB9 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shedulde.swift; sourceTree = "<group>"; };
+		410BE3ED1C78CD5F00E49CB9 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		410BE3EF1C78CF4E00E49CB9 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		410BE3F11C78CF9A00E49CB9 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		410BE3F31C78D58100E49CB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		410BE3F51C78D7CA00E49CB9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +95,8 @@
 				410BE3D51C788E2600E49CB9 /* Info.plist */,
 				410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */,
 				410BE3DC1C78965C00E49CB9 /* Globals.swift */,
+				410BE3E31C78B90100E49CB9 /* CalendarController.swift */,
+				410BE3F51C78D7CA00E49CB9 /* Preferences.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
@@ -84,8 +104,15 @@
 		410BE3E21C78A70700E49CB9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				410BE3DE1C78A6E400E49CB9 /* Timetable.swift */,
+				410BE3E51C78BB1300E49CB9 /* JSON.swift */,
 				410BE3E01C78A6FF00E49CB9 /* TTDB.swift */,
+				410BE3E71C78C19200E49CB9 /* Faculty.swift */,
+				410BE3E91C78C3A400E49CB9 /* Group.swift */,
+				410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */,
+				410BE3ED1C78CD5F00E49CB9 /* Week.swift */,
+				410BE3EF1C78CF4E00E49CB9 /* Day.swift */,
+				410BE3F11C78CF9A00E49CB9 /* Lesson.swift */,
+				410BE3F31C78D58100E49CB9 /* Extensions.swift */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -229,9 +256,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
+				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
 				410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */,
-				410BE3DF1C78A6E400E49CB9 /* Timetable.swift in Sources */,
+				410BE3E61C78BB1300E49CB9 /* JSON.swift in Sources */,
+				410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */,
+				410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */,
+				410BE3E41C78B90100E49CB9 /* CalendarController.swift in Sources */,
+				410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */,
+				410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */,
+				410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */,
 				410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */,
+				410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */,
 				410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */,
 				410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */,
 			);

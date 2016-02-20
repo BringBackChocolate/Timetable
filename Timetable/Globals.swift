@@ -14,6 +14,4 @@ extension NSDate
         return NSCalendar.currentCalendar().component(NSCalendarUnit.Year, fromDate: self)}
     var nextYear:Int{return self.year+1}
     var prevYear:Int{return self.year-1}
-
-
 }

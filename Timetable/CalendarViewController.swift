@@ -9,19 +9,23 @@
 import UIKit
 import EPCalendarPicker
 
-class CalendarViewController: UIViewController,EPCalendarPickerDelegate
+class CalendarViewController: UIViewController
 {
-    let calendarPicker = EPCalendarPicker(startYear:NSDate().prevYear, endYear:NSDate().nextYear, multiSelection: false, selectedDates:nil)
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        TTDB.refresh({
+            if let group=TTDB.findGroup(Preferences.group)
+            {
+                TTDB.loadSheduldeForGroup(group.id)
+            }
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)
-        showCalendar()
+        CalendarController.instance.showCalendar(self)        
     }
     override func didReceiveMemoryWarning()
     {
@@ -32,24 +36,5 @@ class CalendarViewController: UIViewController,EPCalendarPickerDelegate
     {
         super.viewDidLayoutSubviews()
         // Commit frames' updates
-    }
-    
-    func showCalendar()
-    {
-        let calendarPicker = EPCalendarPicker(startYear: 2015, endYear: 2017, multiSelection: true, selectedDates: nil)
-        calendarPicker.calendarDelegate = self
-        calendarPicker.multiSelectEnabled=false
-        let navigationController = UINavigationController(rootViewController: calendarPicker)
-        self.presentViewController(navigationController, animated: true, completion: nil)
-    }
-    
-    func epCalendarPicker(_: EPCalendarPicker, didCancel error : NSError)
-    {
-        
-    }
-    func epCalendarPicker(_: EPCalendarPicker, didSelectDate date : NSDate)
-    {
-        print(date)
-    }
-    func epCalendarPicker(_: EPCalendarPicker, didSelectMultipleDate dates : [NSDate]){}    
+    }          
 }
