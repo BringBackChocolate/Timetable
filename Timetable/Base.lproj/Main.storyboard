@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Calendar View Controller-->
@@ -16,9 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwF-bf-zXd" userLabel="WeekView" customClass="CLWeeklyCalendarView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ugw-gs-xxL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rwF-bf-zXd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ma-uY-GKE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" constant="8" symbolic="YES" id="OrP-4O-m8B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rwF-bf-zXd" secondAttribute="trailing" constant="-20" id="PwZ-5y-tYV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="XPR-Ew-JjO"/>
+                            <constraint firstItem="rwF-bf-zXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gCM-ZG-V12"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OrP-4O-m8B"/>
+                                <exclude reference="XPR-Ew-JjO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vrO-Ti-ssx"/>
+                    <connections>
+                        <outlet property="weekView" destination="rwF-bf-zXd" id="oVG-F4-QgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

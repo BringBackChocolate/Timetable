@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EPCalendarPicker.xcscheme</key>
+		<key>CLWeeklyCalendarView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MSCollectionViewCalendarLayout.xcscheme</key>
+		<key>EPCalendarPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2335D6BFB4C930D6FC257688A064C541</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3F4ED3136065D01037865D960C84E133</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>516C3A09E713CD28413E6293961435BC</key>
+		<key>C1C30ED5FF90D24C34DECDAF330DE0FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0DEC7FA6A26BF80914FF32ACB7FCF9C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

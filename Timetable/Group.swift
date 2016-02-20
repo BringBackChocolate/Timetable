@@ -49,4 +49,4 @@ class Group : NSObject
         }
         return res
     }
-}
+}//http://ruz2.spbstu.ru/api/v1/ruz/scheduler/19904?date=2016-02-22

@@ -1,0 +1,1 @@
+../../../CLWeeklyCalendarView/CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDictionary+CL.h

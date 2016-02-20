@@ -15,9 +15,9 @@ class TTDB
     {
         return NSURL(string:"\(facultiesURL.absoluteString)/\(facId)/groups")!
     }
-    static func groupURL(id:Int)->NSURL
+    static func sheduldeURL(groupId:Int,date:NSDate=NSDate())->NSURL
     {
-        return NSURL(string:"http://ruz2.spbstu.ru/api/v1/ruz/scheduler/\(id)")!
+        return NSURL(string:"http://ruz2.spbstu.ru/api/v1/ruz/scheduler/\(groupId)?date=\(date.dateStr)")!
     }
     static var groups=Set<Group>()
     static var faculties=[Faculty]()
@@ -73,14 +73,14 @@ class TTDB
         }
         return [Group]()
     }
-    static func loadSheduldeForGroup(id:Int)->Shedulde
+    static func loadSheduldeForGroup(id:Int,date:NSDate=NSDate())->Shedulde
     {
-        if let json=jsonFromURL(groupURL(id))
+        if let json=jsonFromURL(sheduldeURL(id,date:date))
         {
-            saveIfNeeded(json,file:"g\(id).json")
+            saveIfNeeded(json,file:"g\(id).\(date.dateStr).json")
             return Shedulde(json:json)
         }
-        if let json=jsonFromFile("g\(id).json")
+        if let json=jsonFromFile("g\(id).\(date.dateStr).json")
         {
             return Shedulde(json:json)
         }

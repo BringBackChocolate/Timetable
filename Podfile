@@ -1,3 +1,3 @@
 use_frameworks!
 pod 'EPCalendarPicker'
-pod 'MSCollectionViewCalendarLayout'
+pod 'CLWeeklyCalendarView', '~> 0.0.2'

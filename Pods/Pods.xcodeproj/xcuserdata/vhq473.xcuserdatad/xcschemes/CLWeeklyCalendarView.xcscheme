@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A1EC636C1F4CD1195FBCB656'
-               BlueprintName = 'MSCollectionViewCalendarLayout'
+               BlueprintIdentifier = '912A67DF5D8F2B3F1ED29F07'
+               BlueprintName = 'CLWeeklyCalendarView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'MSCollectionViewCalendarLayout.framework'>
+               BuildableName = 'CLWeeklyCalendarView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

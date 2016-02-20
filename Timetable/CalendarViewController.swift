@@ -9,11 +9,15 @@
 import UIKit
 import EPCalendarPicker
 
-class CalendarViewController: UIViewController
+class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
 {
+    @IBOutlet var weekView:CLWeeklyCalendarView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //self.weekView.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
+        self.weekView.selectedDate = NSDate()
+        self.weekView.delegate=self
         TTDB.refresh({
             if let group=TTDB.findGroup(Preferences.group)
             {
@@ -22,10 +26,17 @@ class CalendarViewController: UIViewController
         })
         // Do any additional setup after loading the view, typically from a nib.
     }
+    func dailyCalendarViewDidSelect(date:NSDate)
+    {
+        if let group=TTDB.findGroup(Preferences.group)
+        {
+            TTDB.loadSheduldeForGroup(group.id,date:date)
+        }
+    }
     override func viewDidAppear(animated: Bool)
     {
+        self.navigationController?.setNavigationBarHidden(false,animated:animated)
         super.viewDidAppear(animated)
-        CalendarController.instance.showCalendar(self)        
     }
     override func didReceiveMemoryWarning()
     {
@@ -36,5 +47,8 @@ class CalendarViewController: UIViewController
     {
         super.viewDidLayoutSubviews()
         // Commit frames' updates
-    }          
+    }
+    func CLCalendarBehaviorAttributes() -> [NSObject : AnyObject]! {
+        return [CLCalendarCurrentDayNumberBackgroundColor:UIColor.redColor()]
+    }
 }

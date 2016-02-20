@@ -1,0 +1,6 @@
+framework module CLWeeklyCalendarView {
+  umbrella header "CLWeeklyCalendarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

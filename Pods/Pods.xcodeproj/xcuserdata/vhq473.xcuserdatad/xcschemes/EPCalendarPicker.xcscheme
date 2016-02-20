@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '042CCA25B68F7063735C39D3'
+               BlueprintIdentifier = '6984A0046AD977119258FE48'
                BlueprintName = 'EPCalendarPicker'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'EPCalendarPicker.framework'>

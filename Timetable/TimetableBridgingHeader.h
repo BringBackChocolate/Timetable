@@ -8,5 +8,5 @@
 
 #ifndef TimetableBridgingHeader_h
 #define TimetableBridgingHeader_h
-
+#import "CLWeeklyCalendarView.h"
 #endif /* TimetableBridgingHeader_h */

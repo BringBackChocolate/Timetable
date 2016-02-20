@@ -27,4 +27,11 @@ extension NSDate
         components.second = -1
         return NSCalendar.currentCalendar().dateByAddingComponents(components, toDate: startOfDay, options: NSCalendarOptions())
     }
+    
+    var dateStr:String
+    {
+        let components = NSCalendar.currentCalendar().components([.Day,.Month,.Year],fromDate:self)
+        let dateStr="\(components.year)-\(components.month)-\(components.day)"
+        return dateStr
+    }
 }
