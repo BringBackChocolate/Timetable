@@ -1,0 +1,13 @@
+PODS:
+  - JTCalendar (2.1.4)
+  - MSCollectionViewCalendarLayout (0.1.5)
+
+DEPENDENCIES:
+  - JTCalendar
+  - MSCollectionViewCalendarLayout
+
+SPEC CHECKSUMS:
+  JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
+  MSCollectionViewCalendarLayout: 9c52894930d6b712951f18873618fc32c00cd4fa
+
+COCOAPODS: 0.39.0
