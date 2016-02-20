@@ -30,8 +30,16 @@ extension NSDate
     
     var dateStr:String
     {
-        let components = NSCalendar.currentCalendar().components([.Day,.Month,.Year],fromDate:self)
+        let date=self.startOfWeek
+        let components = NSCalendar.currentCalendar().components([.Day,.Month,.Year],fromDate:date)
         let dateStr="\(components.year)-\(components.month)-\(components.day)"
         return dateStr
+    }
+    var startOfWeek:NSDate
+    {
+        var beginningOfWeek:NSDate?
+        NSCalendar.currentCalendar().rangeOfUnit(.WeekOfYear,
+            startDate:&beginningOfWeek,interval: nil, forDate: self)
+        return beginningOfWeek!
     }
 }
