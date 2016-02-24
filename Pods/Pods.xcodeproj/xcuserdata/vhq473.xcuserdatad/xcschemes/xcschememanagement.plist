@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EPCalendarPicker.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +17,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3F4ED3136065D01037865D960C84E133</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C1C30ED5FF90D24C34DECDAF330DE0FD</key>
+		<key>27AD1F43BBF82ED74D611F1CFACFC90A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

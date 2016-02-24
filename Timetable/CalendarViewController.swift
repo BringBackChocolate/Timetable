@@ -7,34 +7,58 @@
 //
 
 import UIKit
-import EPCalendarPicker
 
 class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
 {
     @IBOutlet var weekView:CLWeeklyCalendarView!
+    @IBOutlet var textView:UITextView!
+    var group:Group?
+    var dateSelected=NSDate()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         //self.weekView.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
         self.weekView.selectedDate = NSDate()
         self.weekView.delegate=self
-        TTDB.refresh({
-            if let group=TTDB.findGroup(Preferences.group)
-            {
-                TTDB.loadSheduldeForGroup(group.id)
-            }
+        if(dateSelected==NSDate()){self.dailyCalendarViewDidSelect(NSDate())}
+        dispatch_async(dispatch_get_global_queue(0,0),{
+            TTDB.refresh({
+                if(self.dateSelected==NSDate())
+                {
+                    self.dailyCalendarViewDidSelect(NSDate())
+                }
+            })
         })
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     func dailyCalendarViewDidSelect(date:NSDate)
     {
-        if let group=TTDB.findGroup(Preferences.group)
+        if let group=self.group
         {
-            TTDB.loadSheduldeForGroup(group.id,date:date)
+            dispatch_async(dispatch_get_global_queue(0,0),{
+                self.dateSelected=date
+                let shedulde=TTDB.loadLocalSheduldeForGroup(group.id,date:date,onWeb:
+                {shedulde in
+                    if(date==self.dateSelected)
+                    {
+                        self.reloadShedulde(shedulde,forDate:date)
+                    }
+                })
+                self.reloadShedulde(shedulde,forDate:date)
+            })
         }
     }
-    override func viewDidAppear(animated: Bool)
+    override func viewWillAppear(animated: Bool)
     {
+        self.navigationItem.title=group?.name
+    }
+    override func viewDidAppear(animated:Bool)
+    {
+        if group==nil
+        {
+            self.navigationController?.popViewControllerAnimated(animated)
+        }
         self.navigationController?.setNavigationBarHidden(false,animated:animated)
         super.viewDidAppear(animated)
     }
@@ -48,7 +72,35 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
         super.viewDidLayoutSubviews()
         // Commit frames' updates
     }
+    var calendarAttributes=[CLCalendarCurrentDayNumberBackgroundColor:UIColor.redColor(),
+                            CLCalendarBackgroundImageColor:UIColor.whiteColor(),
+                            CLCalendarDayTitleTextColor:UIColor.blackColor(),
+                            CLCalendarSelectedDayNumberTextColor:UIColor.whiteColor(),
+                            CLCalendarSelectedDayNumberBackgroundColor:UIColor.polytechColor(),
+                            CLCalendarFutureDayNumberTextColor:UIColor.blackColor(),
+                            CLCalendarSelectedCurrentDayNumberBackgroundColor:UIColor.polytechColor(),
+                            CLCalendarSelectedCurrentDayNumberTextColor:UIColor.whiteColor(),
+                            CLCalendarPastDayNumberTextColor:UIColor.lightGrayColor()]
     func CLCalendarBehaviorAttributes() -> [NSObject : AnyObject]! {
-        return [CLCalendarCurrentDayNumberBackgroundColor:UIColor.redColor()]
+        return calendarAttributes
     }
+    func reloadShedulde(shedulde:Shedulde,forDate date:NSDate)
+    {
+        let comp=NSCalendar.currentCalendar().components(NSCalendarUnit.Weekday,fromDate:date)
+        if let currentDay=shedulde.week?.getDay(comp.weekday)
+        {
+            showLessons(currentDay.lessons)
+        }else{showLessons(nil)}
+    }
+    func showLessons(l:[Lesson]?)
+    {dispatch_async(dispatch_get_main_queue(),{
+        self.textView.text=""
+        if let lessons=l
+        {
+            for lesson in lessons
+            {
+                self.textView.text=self.textView.text+"\n\(lesson)"
+            }
+        }
+    })}
 }

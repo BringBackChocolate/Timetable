@@ -2,7 +2,7 @@
 //  Week.swift
 //  Timetable
 //
-//  Created by Sergey Rump (SPHERE) on 20.02.2016.
+//  Created by Sergey Rump on 20.02.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
@@ -38,5 +38,21 @@ class Week
             }
         }
         days=Day.arrayWithJSON(json)
-    }    
+    }
+    func getDay(var weekDay:Int)->Day?
+    {
+        weekDay = weekDay - 1
+        if(weekDay<=0)
+        {
+            weekDay=7
+        }
+        for day in days
+        {
+            if day.weekday==weekDay
+            {
+                return day
+            }
+        }
+        return nil
+    }
 }

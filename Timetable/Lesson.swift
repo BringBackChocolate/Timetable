@@ -2,12 +2,12 @@
 //  Subject.swift
 //  Timetable
 //
-//  Created by Sergey Rump (SPHERE) on 20.02.2016.
+//  Created by Sergey Rump on 20.02.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
 import Foundation
-class Lesson
+class Lesson : CustomStringConvertible
 {
     var name=""
     var additionalInfo=""
@@ -66,5 +66,10 @@ class Lesson
             res.append(Lesson(json:obj,date:date))
         }
         return res
+    }
+    var placeString:String{return place}
+    var description:String
+    {
+        return "\(start.timeString)\n\(name)\n\(placeString)"
     }
 }

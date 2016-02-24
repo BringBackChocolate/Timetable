@@ -2,7 +2,7 @@
 //  TTDB.swift
 //  Timetable
 //
-//  Created by Sergey Rump (SPHERE) on 20.02.2016.
+//  Created by Sergey Rump on 20.02.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
@@ -60,6 +60,21 @@ class TTDB
         }
         return [Faculty]()
     }
+    static func loadLocalFaculties(onWeb:([Faculty])->Void={_ in})->[Faculty]
+    {
+        dispatch_async(dispatch_get_global_queue(0,0),{
+            if let json=jsonFromURL(facultiesURL)
+            {
+                saveIfNeeded(json,file:"faculties.json")
+                onWeb(Faculty.arrayWithJSON(json))
+            }
+        })
+        if let json=jsonFromFile("faculties.json")
+        {
+            return Faculty.arrayWithJSON(json)
+        }
+        return [Faculty]()
+    }
     static func loadFaculty(id:Int)->[Group]
     {
         if let json=jsonFromURL(groupsURL(id))
@@ -67,6 +82,21 @@ class TTDB
             saveIfNeeded(json,file:"groups\(id).json")
             return Group.arrayWithJSON(json)
         }
+        if let json=jsonFromFile("groups\(id).json")
+        {
+            return Group.arrayWithJSON(json)
+        }
+        return [Group]()
+    }
+    static func loadLocalFaculty(id:Int, onWeb:([Group])->Void={_ in})->[Group]
+    {
+        dispatch_async(dispatch_get_global_queue(0,0),{
+            if let json=jsonFromURL(groupsURL(id))
+            {
+                saveIfNeeded(json,file:"groups\(id).json")
+                onWeb(Group.arrayWithJSON(json))
+            }
+        })
         if let json=jsonFromFile("groups\(id).json")
         {
             return Group.arrayWithJSON(json)
@@ -86,7 +116,19 @@ class TTDB
         }
         return Shedulde(json:JSON("{}"))
     }
-
+    static func loadLocalSheduldeForGroup(id:Int,
+                                        date:NSDate=NSDate(),
+                                    onWeb:(Shedulde)->Void={_ in})->Shedulde
+    {
+        dispatch_async(dispatch_get_global_queue(0,0),{
+            onWeb(loadSheduldeForGroup(id,date: date))
+        })
+        if let json=jsonFromFile("g\(id).\(date.dateStr).json")
+        {
+            return Shedulde(json:json)
+        }
+        return Shedulde(json:JSON("{}"))
+    }
     
     static func findGroup(name:String)->Group?
     {
@@ -148,6 +190,7 @@ class TTDB
     static func refresh(onEnd:dispatch_block_t={})
     {
         loadCache()
+        removeOlderThanDate(nil)
         let group = dispatch_group_create()
         dispatch_group_async(group,dispatch_get_global_queue(0, 0),{
             faculties=loadFaculties()
@@ -156,6 +199,7 @@ class TTDB
                 let arr=loadFaculty(fac.id)
                 for g in arr
                 {
+                    g.faculty=fac
                     groups.insert(g)
                 }
             })}
@@ -172,8 +216,37 @@ class TTDB
                 let arr=loadFaculty(fac.id)
                 for g in arr
                 {
+                    g.faculty=fac
                     groups.insert(g)
                 }
+            }
+        }
+    }
+    static func removeOlderThanDate(var date:NSDate?)
+    {
+        if date==nil
+        {
+            let components=NSDateComponents()
+            components.year = -1
+            date=NSCalendar.currentCalendar().dateByAddingComponents(components,toDate:NSDate(),
+                options:NSCalendarOptions(rawValue:0))
+        }
+        let en=fileManager.enumeratorAtPath(documentsFolder)
+        if(en==nil){return}
+        while let file = en!.nextObject()
+        {
+            if let path=file as?String
+            {
+                do{
+                    if let creationDate=try fileManager.attributesOfItemAtPath(path)["NSFileCreationDate"]as?NSDate
+                    {
+                        if creationDate.compare(date!)==NSComparisonResult.OrderedAscending
+                        {
+                            try fileManager.removeItemAtPath(path)
+                        }
+                    }
+                }catch _{}
+                
             }
         }
     }

@@ -42,8 +42,9 @@
     static NSDateFormatter *shortDayOfWeekFormatter;
     if(!shortDayOfWeekFormatter){
         shortDayOfWeekFormatter = [[NSDateFormatter alloc] init];
-        NSLocale* en_AU_POSIX = [[NSLocale alloc] initWithLocaleIdentifier:@"en_AU_POSIX"];
-        [shortDayOfWeekFormatter setLocale:en_AU_POSIX];
+        //NSLocale* en_AU_POSIX = [[NSLocale alloc] initWithLocaleIdentifier:@"en_AU_POSIX"];
+        //[shortDayOfWeekFormatter setLocale:en_AU_POSIX];
+        [shortDayOfWeekFormatter setLocale:[NSLocale currentLocale]];
         [shortDayOfWeekFormatter setDateFormat:@"E"];
     }
     return [shortDayOfWeekFormatter stringFromDate:self];

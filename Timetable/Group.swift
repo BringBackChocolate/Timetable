@@ -2,7 +2,7 @@
 //  Group.swift
 //  Timetable
 //
-//  Created by Sergey Rump (SPHERE) on 20.02.2016.
+//  Created by Sergey Rump on 20.02.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class Group : NSObject
     var level:Int=0
     var type:String="common"
     var spec:String=""
+    var faculty:Faculty?
     
     init(json:JSON)
     {
@@ -49,4 +50,5 @@ class Group : NSObject
         }
         return res
     }
+    override var description:String{return name}
 }//http://ruz2.spbstu.ru/api/v1/ruz/scheduler/19904?date=2016-02-22

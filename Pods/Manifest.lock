@@ -1,13 +1,10 @@
 PODS:
   - CLWeeklyCalendarView (0.0.2)
-  - EPCalendarPicker (1.0.6)
 
 DEPENDENCIES:
   - CLWeeklyCalendarView (~> 0.0.2)
-  - EPCalendarPicker
 
 SPEC CHECKSUMS:
   CLWeeklyCalendarView: b68178cf66fcd8c828440aa9bfc31ba6ed20db9d
-  EPCalendarPicker: 8f05f6d781c7b27c0a14a8d34a7be0e64d4baea5
 
 COCOAPODS: 0.39.0
