@@ -18,12 +18,14 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
         tableView.delegate=self
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"FAC")
         self.navigationItem.title="СПБПУ"
-        TTDB.loadCache()
         faculties=TTDB.loadLocalFaculties({
             facs in
             self.faculties=facs
-            self.tableView.reloadData()
-        })
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+                self.tableView.setNeedsDisplay()
+            })
+        })        
     }
     override func viewDidAppear(animated:Bool)
     {

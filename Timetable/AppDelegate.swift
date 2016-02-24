@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-    {        
+    {
+        dispatch_async(dispatch_get_global_queue(0,0),{
+            TTDB.refresh()
+        })
         // Override point for customization after application launch.
         return true
     }

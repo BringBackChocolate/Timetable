@@ -26,10 +26,13 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
             gs in
             self.groups=gs
             self.groups.sortInPlace({$0.name < $1.name})
-            self.tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+                self.tableView.setNeedsDisplay()
+            })
         })
         self.groups.sortInPlace({$0.name < $1.name})
-        self.filteredGroups=groups
+        self.filteredGroups=groups        
     }
     override func viewDidAppear(animated:Bool)
     {
@@ -86,6 +89,7 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
             return group.name.containsString(searchText)
         }
         tableView.reloadData()
+        self.tableView.setNeedsDisplay()
     }
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         filterContentForSearchText(searchText)
