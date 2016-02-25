@@ -39,11 +39,14 @@ class Lesson : CustomStringConvertible
             place=room
         }
         let teachers=json["teacher"]
+        var i=0
         for (_,obj) in teachers
         {
             if obj["full_name"].isString
             {
-                teacher=obj["full_name"].asString!
+                if i==0{teacher=obj["full_name"].asString!}
+                else{teacher="\(teacher), \(obj["full_name"].asString!)"}
+                i++
             }
         }
         if json["time_start"].isString
