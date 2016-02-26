@@ -11,6 +11,7 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
 {
     var faculties=[Faculty]()
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var favouritesButton:UIButton!
     var selectedFac:Faculty?
     override func viewDidLoad()
     {

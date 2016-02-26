@@ -26,6 +26,7 @@
 		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		41F273A01C7DE05A0057947F /* FacultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F2739F1C7DE05A0057947F /* FacultiesViewController.swift */; };
+		DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41F2739F1C7DE05A0057947F /* FacultiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesViewController.swift; sourceTree = "<group>"; };
 		B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */,
 				410BE3DC1C78965C00E49CB9 /* Globals.swift */,
 				410BE3F51C78D7CA00E49CB9 /* Preferences.swift */,
+				DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,
 				4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */,
 				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
 				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
