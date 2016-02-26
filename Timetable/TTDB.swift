@@ -21,6 +21,7 @@ class TTDB
     }
     static var groups=Set<Group>()
     static var faculties=[Faculty]()
+    static var bookmarks=Set<String>()
     
     static let fileManager=NSFileManager.defaultManager()
     static func stringWithContentsOfURL(url:NSURL)->String?
@@ -208,6 +209,7 @@ class TTDB
     }
     static func loadCache()
     {
+        loadBookmarks()
         if let facJSON=jsonFromFile("faculties.json")
         {
             faculties=Faculty.arrayWithJSON(facJSON)
@@ -248,6 +250,26 @@ class TTDB
                 }catch _{}
                 
             }
+        }
+    }
+    static func loadBookmarks()
+    {
+        if let json=jsonFromFile("bookmarks.json")
+        {
+            for (_,s) in json
+            {
+                if s.isString
+                {
+                    if let str=s.asString
+                    {
+                        bookmarks.insert(str)
+                    }
+                }
+            }
+        }
+        else
+        {
+            save("[]",toFile:"bookmarks.json")
         }
     }
 }
