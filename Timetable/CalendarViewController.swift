@@ -8,18 +8,21 @@
 
 import UIKit
 
-class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
+class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDCalendarViewDataSource,DDCalendarViewDelegate
 {
     @IBOutlet var weekView:CLWeeklyCalendarView!
-    @IBOutlet var textView:UITextView!
+    @IBOutlet var eventsView:DDCalendarView!
     var group:Group?
     var dateSelected=NSDate()
+    var selectedDayLessons=[Lesson]()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         //self.weekView.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
         self.weekView.selectedDate = NSDate()
         self.weekView.delegate=self
+        self.eventsView.showsTomorrow=false
+        self.eventsView.showsTimeMarker=true
         if(dateSelected==NSDate()){self.dailyCalendarViewDidSelect(NSDate())}
         dispatch_async(dispatch_get_global_queue(0,0),{
             TTDB.refresh({
@@ -29,7 +32,6 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
                 }
             })
         })
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     func dailyCalendarViewDidSelect(date:NSDate)
@@ -91,16 +93,57 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate
         {
             showLessons(currentDay.lessons)
         }else{showLessons(nil)}
+        dispatch_async(dispatch_get_main_queue(),{self.eventsView.date=date})
     }
     func showLessons(l:[Lesson]?)
     {dispatch_async(dispatch_get_main_queue(),{
-        self.textView.text=""
         if let lessons=l
         {
-            for lesson in lessons
-            {
-                self.textView.text=self.textView.text+"\n\(lesson)"
-            }
+            self.selectedDayLessons=lessons
+            self.eventsView.reloadData()
+        }
+        else
+        {
+            self.selectedDayLessons.removeAll()
+            self.eventsView.reloadData()
         }
     })}
+    func calendarView(view: DDCalendarView, eventsForDay date: NSDate) -> [AnyObject]?
+    {
+        var events=[DDCalendarEvent]()
+        for l in selectedDayLessons
+        {
+            let event=DDCalendarEvent()
+            event.dateBegin=l.start
+            event.dateEnd=l.end
+            event.title="\(l.name)\n\(l.placeString)\n\(l.teacher)"
+            events.append(event)
+        }
+        if(events.count>0)
+        {dispatch_async(dispatch_get_main_queue(),{
+            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-600)
+            if dateToScroll.startOfDay == NSDate().startOfDay
+            {
+                dateToScroll=NSDate()
+            }
+            view.scrollDateToVisible(dateToScroll, animated:true)
+        })}
+        return events
+    }
+    func calendarView(view: DDCalendarView, allowEditingEvent event: DDCalendarEvent)->Bool {return false}
+    func calendarView(view:DDCalendarView,viewForEvent event:DDCalendarEvent)->DDCalendarEventView?
+    {
+        let res=DDCalendarEventView(event:event)
+        for v in res.subviews
+        {
+            v.tintColor=UIColor.whiteColor()
+            if let l=v as?UILabel
+            {
+                l.textColor=UIColor.whiteColor()
+            }
+        }
+        res.backgroundColor=UIColor.polytechColor()
+        res.tintColor=UIColor.whiteColor()
+        return res;
+    }
 }

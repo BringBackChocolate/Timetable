@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar View Controller-->
+        <!--CalendarViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="Timetable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="CalendarViewController" customClass="CalendarViewController" customModule="Timetable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,32 +23,33 @@
                                     <constraint firstAttribute="height" constant="80" id="Ugw-gs-xxL"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ycc-qv-0Mr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-Zc-aFQ" customClass="DDCalendarView">
                                 <rect key="frame" x="0.0" y="144" width="600" height="456"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5Na-FL-tbk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BSk-ah-eO8"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ycc-qv-0Mr" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" constant="8" id="1UK-Wt-Tyw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ycc-qv-0Mr" secondAttribute="bottom" id="1lc-Em-sLM"/>
                             <constraint firstItem="rwF-bf-zXd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ma-uY-GKE"/>
-                            <constraint firstItem="ycc-qv-0Mr" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="5cT-jZ-lbK"/>
-                            <constraint firstItem="ycc-qv-0Mr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Cd7-kx-U8R"/>
+                            <constraint firstItem="L9N-Zc-aFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D4h-qS-aET"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" constant="8" symbolic="YES" id="OrP-4O-m8B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rwF-bf-zXd" secondAttribute="trailing" constant="-20" id="PwZ-5y-tYV"/>
+                            <constraint firstItem="L9N-Zc-aFQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="TdJ-Xt-IiT"/>
+                            <constraint firstItem="L9N-Zc-aFQ" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="Vvy-WO-e5q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="XPR-Ew-JjO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ycc-qv-0Mr" secondAttribute="trailing" constant="-20" id="Yk0-Qv-GT0"/>
                             <constraint firstItem="rwF-bf-zXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gCM-ZG-V12"/>
-                            <constraint firstItem="ycc-qv-0Mr" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="q6v-lE-SPt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L9N-Zc-aFQ" secondAttribute="trailing" id="lsL-tx-0Wh"/>
+                            <constraint firstItem="L9N-Zc-aFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sDG-lZ-rIt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9N-Zc-aFQ" secondAttribute="bottom" id="vW7-ga-Mh2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="1UK-Wt-Tyw"/>
+                                <exclude reference="D4h-qS-aET"/>
+                                <exclude reference="lsL-tx-0Wh"/>
                                 <exclude reference="OrP-4O-m8B"/>
                                 <exclude reference="XPR-Ew-JjO"/>
                             </mask>
@@ -56,7 +57,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vrO-Ti-ssx"/>
                     <connections>
-                        <outlet property="textView" destination="ycc-qv-0Mr" id="hwJ-Vb-3Ax"/>
+                        <outlet property="eventsView" destination="L9N-Zc-aFQ" id="I7z-AL-tGt"/>
                         <outlet property="weekView" destination="rwF-bf-zXd" id="oVG-F4-QgD"/>
                     </connections>
                 </viewController>
