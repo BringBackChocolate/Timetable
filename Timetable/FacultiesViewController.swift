@@ -19,6 +19,7 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
         tableView.delegate=self
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"FAC")
         self.navigationItem.title="СПБПУ"
+        TTDB.loadBookmarks()
         faculties=TTDB.loadLocalFaculties({
             facs in
             self.faculties=facs
@@ -26,7 +27,11 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
                 self.tableView.reloadData()
                 self.tableView.setNeedsDisplay()
             })
-        })        
+        })
+        if TTDB.bookmarks.count != 0
+        {
+            self.performSegueWithIdentifier("showBookmarks", sender:self)
+        }
     }
     override func viewDidAppear(animated:Bool)
     {

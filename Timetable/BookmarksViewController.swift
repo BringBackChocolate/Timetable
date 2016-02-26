@@ -33,5 +33,15 @@ class BookmarksViewController: SearchViewController
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if(segue.identifier=="showTimetable")
+        {
+            if let vc=segue.destinationViewController as?CalendarViewController
+            {
+               vc.group=selectedGroup
+            }
+        }
+        super.prepareForSegue(segue,sender:sender)
+    }
 }
