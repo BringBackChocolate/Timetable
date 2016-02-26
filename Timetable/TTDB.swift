@@ -272,4 +272,24 @@ class TTDB
             save("[]",toFile:"bookmarks.json")
         }
     }
+    static func saveBookmarks()
+    {
+        let json=JSON(Array(bookmarks))
+        let newStr=json.toString()
+        if let oldStr=loadFromFile("bookmarks.json")
+        {
+            if oldStr == newStr {return}
+        }
+        save(newStr, toFile: "bookmarks.json")
+    }
+    static func addBookmark(bookmark:String)
+    {
+        bookmarks.insert(bookmark)
+        saveBookmarks()
+    }
+    static func removeBookmark(bookmark:String)
+    {
+        bookmarks.remove(bookmark)
+        saveBookmarks()
+    }
 }
