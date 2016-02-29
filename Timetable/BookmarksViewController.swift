@@ -197,6 +197,10 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     {
         filterContentForSearchText(searchBar.text!)
     }
+
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
     //== Search Helpers
     
