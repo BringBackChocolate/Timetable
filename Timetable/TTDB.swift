@@ -21,7 +21,7 @@ class TTDB
     }
     static var groups=Set<Group>()
     static var faculties=[Faculty]()
-    static var bookmarks=Set<Group>()
+    static var bookmarks=[Group]()
     
     static let fileManager=NSFileManager.defaultManager()
     static func stringWithContentsOfURL(url:NSURL)->String?
@@ -259,7 +259,7 @@ class TTDB
         {
             for (_,s) in json
             {
-                bookmarks.insert(Group(json:s))
+                addBookmark(Group(json:s))
             }
         }
         else
@@ -288,12 +288,18 @@ class TTDB
     }
     static func addBookmark(bookmark:Group)
     {
-        bookmarks.insert(bookmark)
+        if(!bookmarks.contains(bookmark))
+        {
+            bookmarks.append(bookmark)
+        }
         saveBookmarks()
     }
     static func removeBookmark(bookmark:Group)
     {
-        bookmarks.remove(bookmark)
+        if let idx=bookmarks.indexOf(bookmark)
+        {
+            bookmarks.removeAtIndex(idx)
+        }
         saveBookmarks()
     }
     static func groupIsFav(group:Group)->Bool

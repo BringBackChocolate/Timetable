@@ -23,10 +23,7 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         tableView.delegate=self
         self.groups = Array(TTDB.bookmarks)
         dispatch_async(dispatch_get_main_queue(),{
-            TTDB.loadBookmarks()
-            self.groups = self.groups.sort({g1,g2 in
-                return g1.name<g2.name
-            })
+            TTDB.loadBookmarks()            
             self.filteredGroups = self.groups
             self.tableView.reloadData()
             self.tableView.setNeedsDisplay()

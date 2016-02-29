@@ -56,12 +56,10 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     override func viewWillAppear(animated: Bool)
     {
         self.navigationItem.title=group?.name
-        setBarButtonItem(false)
         if let g=group
         {
             setBarButtonItem(TTDB.groupIsFav(g))
         }
-
     }
     override func viewDidAppear(animated:Bool)
     {
@@ -129,12 +127,12 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         }
         if(events.count>0)
         {dispatch_async(dispatch_get_main_queue(),{
-            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-600)
+            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-2*3600)
             if dateToScroll.startOfDay == NSDate().startOfDay
             {
                 dateToScroll=NSDate()
             }
-            view.scrollDateToVisible(dateToScroll, animated:true)
+            view.scrollDateToVisible(dateToScroll, animated:false)
         })}
         return events
     }
