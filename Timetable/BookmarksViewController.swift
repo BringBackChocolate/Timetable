@@ -20,6 +20,7 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         self.tableView.backgroundColor = UIColor.polytechColor()
         super.viewDidLoad()
         self.navigationItem.title="Избранное"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Изменить", style: .Plain, target: self, action: "editingModeChange:")
         tableView.delegate=self
         self.groupNames = Array(TTDB.bookmarks)
         dispatch_async(dispatch_get_main_queue(),{
@@ -30,6 +31,21 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
             self.tableView.setNeedsDisplay()
         })
         // Do any additional setup after loading the view.
+    }
+    
+    func editingModeChange(sender: UIBarButtonItem)
+    {
+        self.tableView.setEditing(!self.tableView.editing, animated: true)
+        if(self.tableView.editing)
+        {
+            sender.style = .Done
+            sender.title = "Готово"
+        }
+        else
+        {
+            sender.style = .Plain
+            sender.title = "Изменить"
+        }
     }
     
     override func viewDidAppear(animated:Bool)
@@ -43,11 +59,11 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     }
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:NSIndexPath)->Bool
     {
-        return false
+        return true
     }
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath)->Bool
     {
-        return false
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,13 +82,17 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         cell.backgroundColor=tableView.backgroundColor
         return cell
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let groupIdx=indexPath.row
         let groupName=filteredGroupNames[groupIdx]
         self.selectedGroup=TTDB.findGroup(groupName)
-        tableView.deselectRowAtIndexPath(indexPath,animated:true)
-        self.performSegueWithIdentifier("showTimetable", sender:self)
+        if(self.tableView.editing != true)
+        {
+            tableView.deselectRowAtIndexPath(indexPath,animated:true)
+            self.performSegueWithIdentifier("showTimetable", sender:self)
+        }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier=="showTimetable")
@@ -84,6 +104,31 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         }
         super.prepareForSegue(segue,sender:sender)
     }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+            switch editingStyle {
+            case .Delete:
+                // remove the deleted item from the model
+                self.filteredGroupNames.removeAtIndex(indexPath.row)
+                
+                // remove the deleted item from the `UITableView`
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            default:
+                return
+            }
+    }
+    
+    // called when a row is moved
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+            // remove the dragged row's model
+            let val = self.filteredGroupNames.removeAtIndex(sourceIndexPath.row)
+            
+            // insert it into the new position
+            self.filteredGroupNames.insert(val, atIndex: destinationIndexPath.row)
+    }
+    
     func filterContentForSearchText(searchText: String) {
         if searchText == "" {
             self.filteredGroupNames = self.groupNames

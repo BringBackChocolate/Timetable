@@ -256,7 +256,7 @@
                     <navigationItem key="navigationItem" id="KW5-C2-Qf4">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="wjZ-NF-0P3">
                             <connections>
-                                <segue destination="gHU-ld-hIo" kind="show" id="MpG-bu-54s"/>
+                                <segue destination="gHU-ld-hIo" kind="show" identifier="showBookmarks" id="MpG-bu-54s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
