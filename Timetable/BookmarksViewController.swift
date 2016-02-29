@@ -10,17 +10,29 @@ import UIKit
 
 class BookmarksViewController: UIViewController , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
 {
+    //string constants
+    let kEditButtonName:String = "Изменить"
+    let kDoneButtonName:String = "Готово"
+    let kCancelButtonName:String = "Отменить"
+    let kChangeEditingModeSelectorName = "changeEditingMode:"
+    let kCancelSearchSelectorName = "cancelSearch:"
+    
     @IBOutlet var tableView:UITableView!
     @IBOutlet var searchBar:UISearchBar!
+    
     var selectedGroup:Group?
     var groups = [Group]()
     var filteredGroups = [Group]()
-    override func viewDidLoad() {
+    
+    //== View delegates
+    
+    override func viewDidLoad()
+    {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"GROUP")
         self.tableView.backgroundColor = UIColor.polytechColor()
         super.viewDidLoad()
         self.navigationItem.title="Избранное"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Изменить", style: .Plain, target: self, action: "editingModeChange:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: kEditButtonName, style: .Plain, target: self, action: Selector(self.kChangeEditingModeSelectorName))
         tableView.delegate=self
         self.groups = Array(TTDB.bookmarks)
         dispatch_async(dispatch_get_main_queue(),{
@@ -29,22 +41,6 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
             self.tableView.reloadData()
             self.tableView.setNeedsDisplay()
         })
-        // Do any additional setup after loading the view.
-    }
-    
-    func editingModeChange(sender: UIBarButtonItem)
-    {
-        self.tableView.setEditing(!self.tableView.editing, animated: true)
-        if(self.tableView.editing)
-        {
-            sender.style = .Done
-            sender.title = "Готово"
-        }
-        else
-        {
-            sender.style = .Plain
-            sender.title = "Изменить"
-        }
     }
     
     override func viewDidAppear(animated:Bool)
@@ -61,6 +57,55 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         self.filteredGroups=groups
         super.viewWillAppear(animated)
     }
+    
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //== Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if(segue.identifier=="showTimetable")
+        {
+            if let vc=segue.destinationViewController as?CalendarViewController
+            {
+                vc.group=selectedGroup
+            }
+        }
+        super.prepareForSegue(segue,sender:sender)
+    }
+    
+    //== Helpers
+    
+    func allowEnterEditMode(sender: UIBarButtonItem)
+    {
+        self.tableView.editing = false
+        sender.style = .Plain
+        sender.title = self.kEditButtonName
+        sender.action = Selector(self.kChangeEditingModeSelectorName)
+    }
+    
+    func changeEditingMode(sender: UIBarButtonItem)
+    {
+        if(self.tableView.editing)
+        {
+            self.tableView.setEditing(false, animated: true)
+            sender.style = .Plain
+            sender.title = self.kEditButtonName
+        }
+        else
+        {
+            self.tableView.setEditing(true, animated: true)
+            sender.style = .Done
+            sender.title = self.kDoneButtonName
+        }
+    }
+    
+    //== Table view delegates
+    
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int)->Int
     {
         return filteredGroups.count
@@ -72,11 +117,6 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath)->Bool
     {
         return true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -101,16 +141,6 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
             tableView.deselectRowAtIndexPath(indexPath,animated:true)
             self.performSegueWithIdentifier("showTimetable", sender:self)
         }
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier=="showTimetable")
-        {
-            if let vc=segue.destinationViewController as?CalendarViewController
-            {
-                vc.group=selectedGroup
-            }
-        }
-        super.prepareForSegue(segue,sender:sender)
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
@@ -143,40 +173,72 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         TTDB.saveBookmarks()
     }
     
-    func filterContentForSearchText(searchText: String) {
-        if searchText == "" {
-            self.navigationItem.rightBarButtonItem?.enabled = true
-            self.filteredGroups = self.groups
-            return
-        }
-        
-        self.navigationItem.rightBarButtonItem?.enabled = false
+    //== Search delegates
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar)   //user taps on search text field
+    {
+        //if we performing editing in the moment, cancel editing
         if(self.tableView.editing)
         {
-            editingModeChange(self.navigationItem.rightBarButtonItem!)
+            changeEditingMode(self.navigationItem.rightBarButtonItem!)
         }
         
-        self.filteredGroups = groups.filter { group in
-            return group.name.containsString(searchText)
+        //top right button is cancel button now
+        self.navigationItem.rightBarButtonItem?.title = self.kCancelButtonName
+        self.navigationItem.rightBarButtonItem?.action = Selector(self.kCancelSearchSelectorName)
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        filterContentForSearchText(searchText)
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar)
+    {
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+    //== Search Helpers
+    
+    func filterContentForSearchText(searchText: String)
+    {
+        if searchText == ""
+        {
+            if(self.filteredGroups.count != self.groups.count)
+            {
+                self.filteredGroups = self.groups
+            }
+            else
+            {
+                //do not reload table view if nothing to update
+                return
+            }
+        }
+        else
+        {
+            self.filteredGroups = groups.filter { group in
+                return group.name.containsString(searchText)
+            }
+
         }
         tableView.reloadData()
         self.tableView.setNeedsDisplay()
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        filterContentForSearchText(searchText)
+    func cancelSearch(sender: UIBarButtonItem)
+    {
+        //clear search request
+        self.searchBar.text = ""
+        
+        //display all groups
+        self.filteredGroups = self.groups
+        tableView.reloadData()
+        self.tableView.setNeedsDisplay()
+        
+        //disable searching mode
+        self.searchBar.endEditing(true)
+        
+        //change top right button
+        allowEnterEditMode(sender)
     }
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        filterContentForSearchText(searchBar.text!)
-    }
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
 }
