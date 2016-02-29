@@ -173,10 +173,17 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-Lt-FgL">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gHU-ld-hIo" id="KUg-pR-BGo"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-En-pG1">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gHU-ld-hIo" id="T6K-0X-k4p"/>
+                                    <outlet property="delegate" destination="gHU-ld-hIo" id="RVA-vC-Ebf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,13 +199,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="CMt-Lt-FgL" id="uRT-AM-qbg"/>
-                        <outlet property="tableView" destination="hgF-En-pG1" id="PXW-Lf-PBg"/>
+                        <outlet property="searchBar" destination="CMt-Lt-FgL" id="KhU-Fy-QlR"/>
+                        <outlet property="tableView" destination="hgF-En-pG1" id="TOs-jS-unV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showTimetable" id="DHI-JT-Ail"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rL-et-2fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="1345"/>
+            <point key="canvasLocation" x="1268" y="1431"/>
         </scene>
         <!--Faculties View Controller-->
         <scene sceneID="Gpq-nf-CFE">
@@ -271,4 +279,7 @@
             <point key="canvasLocation" x="1273" y="522"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DHI-JT-Ail"/>
+    </inferredMetricsTieBreakers>
 </document>
