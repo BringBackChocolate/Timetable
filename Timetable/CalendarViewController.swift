@@ -12,6 +12,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
 {
     @IBOutlet var weekView:CLWeeklyCalendarView!
     @IBOutlet var eventsView:DDCalendarView!
+    @IBOutlet var favButton:UIBarButtonItem!
     var group:Group?
     var dateSelected=NSDate()
     var selectedDayLessons=[Lesson]()
@@ -32,6 +33,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
                 }
             })
         })
+        if let g=group{TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)}
         // Do any additional setup after loading the view, typically from a nib.
     }
     func dailyCalendarViewDidSelect(date:NSDate)
@@ -54,6 +56,12 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     override func viewWillAppear(animated: Bool)
     {
         self.navigationItem.title=group?.name
+        setBarButtonItem(false)
+        if let g=group
+        {
+            setBarButtonItem(TTDB.groupIsFav(g))
+        }
+
     }
     override func viewDidAppear(animated:Bool)
     {
@@ -145,5 +153,32 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         res.backgroundColor=UIColor.polytechColor()
         res.tintColor=UIColor.whiteColor()
         return res;
+    }
+    @IBAction func favButtonPressed()
+    {
+        if let g=group
+        {
+            if(TTDB.groupIsFav(g))
+            {
+                TTDB.removeBookmark(g)
+                setBarButtonItem(false)
+            }
+            else
+            {
+                TTDB.addBookmark(g)
+                setBarButtonItem(true)
+            }
+        }
+    }
+    func setBarButtonItem(state:Bool)
+    {
+        if(state)
+        {
+            favButton.image=UIImage(named:"Bookmark-Filled")
+        }
+        else
+        {
+            favButton.image=UIImage(named:"Bookmark")
+        }
     }
 }

@@ -13,8 +13,8 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     @IBOutlet var tableView:UITableView!
     @IBOutlet var searchBar:UISearchBar!
     var selectedGroup:Group?
-    var groupNames = [String]()
-    var filteredGroupNames = [String]()
+    var groups = [Group]()
+    var filteredGroups = [Group]()
     override func viewDidLoad() {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"GROUP")
         self.tableView.backgroundColor = UIColor.polytechColor()
@@ -22,11 +22,13 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
         self.navigationItem.title="Избранное"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Изменить", style: .Plain, target: self, action: "editingModeChange:")
         tableView.delegate=self
-        self.groupNames = Array(TTDB.bookmarks)
+        self.groups = Array(TTDB.bookmarks)
         dispatch_async(dispatch_get_main_queue(),{
             TTDB.loadBookmarks()
-            self.groupNames = self.groupNames.sort()
-            self.filteredGroupNames = self.groupNames
+            self.groups = self.groups.sort({g1,g2 in
+                return g1.name<g2.name
+            })
+            self.filteredGroups = self.groups
             self.tableView.reloadData()
             self.tableView.setNeedsDisplay()
         })
@@ -52,10 +54,19 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     {
         self.navigationController?.setNavigationBarHidden(false,animated:animated)
         super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    override func viewWillAppear(animated: Bool)
+    {
+        self.groups = Array(TTDB.bookmarks)
+        self.searchBar.text=""
+        self.searchBar.resignFirstResponder()
+        self.filteredGroups=groups
+        super.viewWillAppear(animated)
     }
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int)->Int
     {
-        return filteredGroupNames.count
+        return filteredGroups.count
     }
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:NSIndexPath)->Bool
     {
@@ -75,7 +86,7 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     {
         let groupIdx=indexPath.row
         let cell = tableView.dequeueReusableCellWithIdentifier("GROUP",forIndexPath:indexPath)
-        let groupName=filteredGroupNames[groupIdx]
+        let groupName=filteredGroups[groupIdx].name
         cell.textLabel?.text = groupName
         cell.tintColor=tableView.tintColor
         cell.textLabel?.textColor=UIColor.whiteColor()
@@ -86,9 +97,9 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let groupIdx=indexPath.row
-        let groupName=filteredGroupNames[groupIdx]
-        self.selectedGroup=TTDB.findGroup(groupName)
-        if(self.tableView.editing != true)
+        let sel_group=filteredGroups[groupIdx]
+        self.selectedGroup=sel_group
+        if(self.tableView.editing != true && self.selectedGroup != nil)
         {
             tableView.deselectRowAtIndexPath(indexPath,animated:true)
             self.performSegueWithIdentifier("showTimetable", sender:self)
@@ -110,7 +121,7 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
             switch editingStyle {
             case .Delete:
                 // remove the deleted item from the model
-                self.filteredGroupNames.removeAtIndex(indexPath.row)
+                self.filteredGroups.removeAtIndex(indexPath.row)
                 
                 // remove the deleted item from the `UITableView`
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -123,19 +134,19 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
     {
             // remove the dragged row's model
-            let val = self.filteredGroupNames.removeAtIndex(sourceIndexPath.row)
+            let val = self.filteredGroups.removeAtIndex(sourceIndexPath.row)
             
             // insert it into the new position
-            self.filteredGroupNames.insert(val, atIndex: destinationIndexPath.row)
+            self.filteredGroups.insert(val, atIndex: destinationIndexPath.row)
     }
     
     func filterContentForSearchText(searchText: String) {
         if searchText == "" {
-            self.filteredGroupNames = self.groupNames
+            self.filteredGroups = self.groups
             return
         }
-        self.filteredGroupNames = groupNames.filter { group in
-            return group.containsString(searchText)
+        self.filteredGroups = groups.filter { group in
+            return group.name.containsString(searchText)
         }
         tableView.reloadData()
         self.tableView.setNeedsDisplay()
