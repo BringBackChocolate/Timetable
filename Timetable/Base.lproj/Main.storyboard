@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rqt-ZQ-gEV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rqt-ZQ-gEV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -172,16 +172,18 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-Lt-FgL">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <color key="barTintColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gHU-ld-hIo" id="KUg-pR-BGo"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-En-pG1">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gHU-ld-hIo" id="T6K-0X-k4p"/>
+                                    <outlet property="delegate" destination="gHU-ld-hIo" id="RVA-vC-Ebf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,14 +199,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="CMt-Lt-FgL" id="uRT-AM-qbg"/>
-                        <outlet property="tableView" destination="hgF-En-pG1" id="PXW-Lf-PBg"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showTimetable" id="Vwf-aG-DoZ"/>
+                        <outlet property="searchBar" destination="CMt-Lt-FgL" id="KhU-Fy-QlR"/>
+                        <outlet property="tableView" destination="hgF-En-pG1" id="TOs-jS-unV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showTimetable" id="DHI-JT-Ail"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rL-et-2fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="1345"/>
+            <point key="canvasLocation" x="1268" y="1431"/>
         </scene>
         <!--Faculties View Controller-->
         <scene sceneID="Gpq-nf-CFE">
@@ -254,7 +256,7 @@
                     <navigationItem key="navigationItem" id="KW5-C2-Qf4">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="wjZ-NF-0P3">
                             <connections>
-                                <segue destination="gHU-ld-hIo" kind="show" identifier="showBookmarks" id="MpG-bu-54s"/>
+                                <segue destination="gHU-ld-hIo" kind="show" id="MpG-bu-54s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -278,6 +280,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vwf-aG-DoZ"/>
+        <segue reference="DHI-JT-Ail"/>
     </inferredMetricsTieBreakers>
 </document>
