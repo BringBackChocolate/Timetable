@@ -118,10 +118,14 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
             switch editingStyle {
             case .Delete:
                 // remove the deleted item from the model
-                self.filteredGroups.removeAtIndex(indexPath.row)
+                let groupToRemove =  self.filteredGroups.removeAtIndex(indexPath.row)
                 
                 // remove the deleted item from the `UITableView`
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+                TTDB.removeBookmark(groupToRemove)
+                self.groups = TTDB.bookmarks
+                
             default:
                 return
             }
@@ -130,18 +134,28 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     // called when a row is moved
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
     {
-            // remove the dragged row's model
-            let val = self.filteredGroups.removeAtIndex(sourceIndexPath.row)
-            
-            // insert it into the new position
-            self.filteredGroups.insert(val, atIndex: destinationIndexPath.row)
+        // remove the dragged row's model
+        let val = self.filteredGroups.removeAtIndex(sourceIndexPath.row)
+        
+        // insert it into the new position
+        self.filteredGroups.insert(val, atIndex: destinationIndexPath.row)
+        TTDB.bookmarks = filteredGroups
+        TTDB.saveBookmarks()
     }
     
     func filterContentForSearchText(searchText: String) {
         if searchText == "" {
+            self.navigationItem.rightBarButtonItem?.enabled = true
             self.filteredGroups = self.groups
             return
         }
+        
+        self.navigationItem.rightBarButtonItem?.enabled = false
+        if(self.tableView.editing)
+        {
+            editingModeChange(self.navigationItem.rightBarButtonItem!)
+        }
+        
         self.filteredGroups = groups.filter { group in
             return group.name.containsString(searchText)
         }
