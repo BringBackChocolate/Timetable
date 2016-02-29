@@ -33,6 +33,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
                 }
             })
         })
+        if let g=group{TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)}
         // Do any additional setup after loading the view, typically from a nib.
     }
     func dailyCalendarViewDidSelect(date:NSDate)
@@ -58,7 +59,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         setBarButtonItem(false)
         if let g=group
         {
-            setBarButtonItem(TTDB.groupIsFav(g.name))
+            setBarButtonItem(TTDB.groupIsFav(g))
         }
 
     }
@@ -157,14 +158,14 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     {
         if let g=group
         {
-            if(TTDB.groupIsFav(g.name))
+            if(TTDB.groupIsFav(g))
             {
-                TTDB.removeBookmark(g.name)
+                TTDB.removeBookmark(g)
                 setBarButtonItem(false)
             }
             else
             {
-                TTDB.addBookmark(g.name)
+                TTDB.addBookmark(g)
                 setBarButtonItem(true)
             }
         }

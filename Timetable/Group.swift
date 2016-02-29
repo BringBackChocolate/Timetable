@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Group : NSObject
+class Group : Equatable,Hashable,CustomStringConvertible
 {
     var id:Int=0
     var name:String=""
@@ -15,6 +15,7 @@ class Group : NSObject
     var type:String="common"
     var spec:String=""
     var faculty:Faculty?
+    var hashValue:Int{return id}
     
     init(json:JSON)
     {
@@ -50,5 +51,23 @@ class Group : NSObject
         }
         return res
     }
-    override var description:String{return name}
+    var description:String{return name}
+    var json:JSON
+    {
+        var dict=[String:AnyObject]()
+        dict["id"]=id
+        dict["name"]=name
+        dict["level"]=level
+        dict["type"]=type
+        dict["spec"]=spec
+        return JSON(dict)
+    }
+    var jsonString:String
+    {
+        return json.toString()
+    }
 }//http://ruz2.spbstu.ru/api/v1/ruz/scheduler/19904?date=2016-02-22
+func ==(lhs: Group, rhs: Group)->Bool
+{
+    return (lhs.id==rhs.id)&&(lhs.name==lhs.name)
+}

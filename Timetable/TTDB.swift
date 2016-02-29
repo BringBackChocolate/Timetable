@@ -21,7 +21,7 @@ class TTDB
     }
     static var groups=Set<Group>()
     static var faculties=[Faculty]()
-    static var bookmarks=Set<String>()
+    static var bookmarks=Set<Group>()
     
     static let fileManager=NSFileManager.defaultManager()
     static func stringWithContentsOfURL(url:NSURL)->String?
@@ -259,13 +259,7 @@ class TTDB
         {
             for (_,s) in json
             {
-                if s.isString
-                {
-                    if let str=s.asString
-                    {
-                        bookmarks.insert(str)
-                    }
-                }
+                bookmarks.insert(Group(json:s))
             }
         }
         else
@@ -273,9 +267,18 @@ class TTDB
             save("[]",toFile:"bookmarks.json")
         }
     }
+    static var jsonArrayBookmarks:[JSON]
+    {
+        var res=[JSON]()
+        for b in bookmarks
+        {
+            res.append(b.json)
+        }
+        return res
+    }
     static func saveBookmarks()
     {
-        let json=JSON(Array(bookmarks))
+        let json=JSON(jsonArrayBookmarks)
         let newStr=json.toString()
         if let oldStr=loadFromFile("bookmarks.json")
         {
@@ -283,18 +286,41 @@ class TTDB
         }
         save(newStr, toFile: "bookmarks.json")
     }
-    static func addBookmark(bookmark:String)
+    static func addBookmark(bookmark:Group)
     {
         bookmarks.insert(bookmark)
         saveBookmarks()
     }
-    static func removeBookmark(bookmark:String)
+    static func removeBookmark(bookmark:Group)
     {
         bookmarks.remove(bookmark)
         saveBookmarks()
     }
-    static func groupIsFav(grName:String)->Bool
+    static func groupIsFav(group:Group)->Bool
     {
-        return bookmarks.contains(grName)
+        return bookmarks.contains({
+            g in
+            return g.id==group.id
+        })
+    }
+    static func cacheGroup(grId:Int,var date:NSDate=NSDate(),weeks:Int)
+    {
+        dispatch_async(dispatch_get_main_queue(),
+        {
+            for var i=0;i<weeks;i++
+            {
+                date=date.nextWeek
+                loadSheduldeForGroup(grId,date:date)
+            }
+        })
+    }
+    static var bookmarksNames:[String]
+    {
+        var res=[String]()
+        for g in bookmarks
+        {
+            res.append(g.name)
+        }
+        return res
     }
 }

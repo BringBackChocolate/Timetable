@@ -42,4 +42,8 @@ extension NSDate
             startDate:&beginningOfWeek,interval: nil, forDate: self)
         return beginningOfWeek!
     }
+    var nextWeek:NSDate
+    {
+       return self.dateByAddingTimeInterval(604800)
+    }
 }
