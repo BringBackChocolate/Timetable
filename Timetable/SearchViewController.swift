@@ -97,4 +97,7 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         filterContentForSearchText(searchBar.text!)
     }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }

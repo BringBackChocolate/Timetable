@@ -133,7 +133,7 @@
                                     <outlet property="delegate" destination="W3f-PW-VG9" id="gsE-0E-lXN"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="U9X-w1-aSj">
+                            <searchBar contentMode="redraw" placeholder="Поиск группы" translatesAutoresizingMaskIntoConstraints="NO" id="U9X-w1-aSj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <color key="barTintColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -178,7 +178,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-Lt-FgL">
+                            <searchBar contentMode="redraw" placeholder="Поиск по закладкам" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-Lt-FgL">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <color key="barTintColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -292,6 +292,6 @@
         <image name="Bookmark" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DHI-JT-Ail"/>
+        <segue reference="PxW-OJ-vHX"/>
     </inferredMetricsTieBreakers>
 </document>

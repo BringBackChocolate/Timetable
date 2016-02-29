@@ -169,6 +169,9 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         filterContentForSearchText(searchBar.text!)
     }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
     

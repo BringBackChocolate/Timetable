@@ -79,4 +79,7 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
         }
         super.prepareForSegue(segue,sender:sender)
     }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
