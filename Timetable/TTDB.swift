@@ -240,6 +240,7 @@ class TTDB
             if let path=file as?String
             {
                 do{
+                    if(path=="bookmarks.json"){continue}
                     if let creationDate=try fileManager.attributesOfItemAtPath(path)["NSFileCreationDate"]as?NSDate
                     {
                         if creationDate.compare(date!)==NSComparisonResult.OrderedAscending
@@ -291,5 +292,9 @@ class TTDB
     {
         bookmarks.remove(bookmark)
         saveBookmarks()
+    }
+    static func groupIsFav(grName:String)->Bool
+    {
+        return bookmarks.contains(grName)
     }
 }

@@ -36,6 +36,15 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     {
         self.navigationController?.setNavigationBarHidden(false,animated:animated)
         super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    override func viewWillAppear(animated: Bool)
+    {
+        self.groupNames = Array(TTDB.bookmarks)
+        self.searchBar.text=""
+        self.searchBar.resignFirstResponder()
+        self.filteredGroupNames=groupNames
+        super.viewWillAppear(animated)
     }
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int)->Int
     {
