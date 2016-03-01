@@ -21,6 +21,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         super.viewDidLoad()
         //self.weekView.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
         self.weekView.selectedDate = NSDate()
+        self.eventsView.date=NSDate()
         self.weekView.delegate=self
         self.eventsView.showsTomorrow=false
         self.eventsView.showsTimeMarker=true
@@ -38,6 +39,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     }
     func dailyCalendarViewDidSelect(date:NSDate)
     {
+        //print("dailyCalendarViewDidSelect(\(date))")
         if let group=self.group
         {
             dispatch_async(dispatch_get_global_queue(0,0),{
@@ -127,12 +129,15 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         }
         if(events.count>0)
         {dispatch_async(dispatch_get_main_queue(),{
-            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-2*3600)
+            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-1*3600)
             if dateToScroll.startOfDay == NSDate().startOfDay
             {
                 dateToScroll=NSDate()
             }
-            view.scrollDateToVisible(dateToScroll, animated:false)
+            if view.date.startOfDay != dateToScroll.startOfDay{
+                view.date=dateToScroll}
+            //print("scrollDateToVisible(\(dateToScroll))")
+            view.scrollDateToVisible(dateToScroll, animated:true)
         })}
         return events
     }
@@ -156,6 +161,10 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     }
     func calendarView(view: DDCalendarView, didSelectEvent event: DDCalendarEvent,withView eventView: DDCalendarEventView) {
         //eventView.active=false
+    }
+    func calendarView(view: DDCalendarView, focussedOnDay date: NSDate) {
+        if(weekView==nil){return}
+        view.date=weekView.selectedDate
     }
     @IBAction func favButtonPressed()
     {
