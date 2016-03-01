@@ -1,13 +1,10 @@
 PODS:
   - CLWeeklyCalendarView (0.0.2)
-  - DDCalendarView (1.0)
 
 DEPENDENCIES:
   - CLWeeklyCalendarView (~> 0.0.2)
-  - DDCalendarView
 
 SPEC CHECKSUMS:
   CLWeeklyCalendarView: b68178cf66fcd8c828440aa9bfc31ba6ed20db9d
-  DDCalendarView: f7dc1ee630d7a65bcc728ff8652dc5473b803993
 
 COCOAPODS: 0.39.0

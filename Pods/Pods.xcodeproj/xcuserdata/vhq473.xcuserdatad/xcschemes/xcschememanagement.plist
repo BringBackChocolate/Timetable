@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DDCalendarView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +17,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>632DA29E913962EA05363E57F4111CCD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6A64089C798AB866F382A047181E65A</key>
+		<key>27AD1F43BBF82ED74D611F1CFACFC90A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

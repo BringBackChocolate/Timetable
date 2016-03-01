@@ -148,9 +148,14 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
                 l.textColor=UIColor.whiteColor()
             }
         }
-        res.backgroundColor=UIColor.polytechColor()
+        res.activeBackgroundColor=UIColor.polytechColor()
+        res.inactiveBackgroundColor=UIColor.polytechColor().colorWithAlphaComponent(0.75)
+        res.backgroundColor=res.inactiveBackgroundColor
         res.tintColor=UIColor.whiteColor()
         return res;
+    }
+    func calendarView(view: DDCalendarView, didSelectEvent event: DDCalendarEvent,withView eventView: DDCalendarEventView) {
+        //eventView.active=false
     }
     @IBAction func favButtonPressed()
     {

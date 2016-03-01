@@ -28,11 +28,11 @@ class TTDB
     {
         if let data=NSData(contentsOfURL:url)
         {
-            if let string=String(data:data, encoding:NSWindowsCP1251StringEncoding)
+            if let string=String(data:data, encoding:NSUTF8StringEncoding)
             {
                 return string
             }
-            if let string=String(data:data, encoding:NSUTF8StringEncoding)
+            if let string=String(data:data, encoding:NSWindowsCP1251StringEncoding)
             {
                 return string
             }
@@ -311,7 +311,7 @@ class TTDB
     }
     static func cacheGroup(grId:Int,var date:NSDate=NSDate(),weeks:Int)
     {
-        dispatch_async(dispatch_get_main_queue(),
+        dispatch_async(dispatch_get_global_queue(0,0),
         {
             for var i=0;i<weeks;i++
             {

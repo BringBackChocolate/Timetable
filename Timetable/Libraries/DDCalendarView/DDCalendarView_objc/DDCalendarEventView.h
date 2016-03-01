@@ -15,6 +15,9 @@
 
 - (id)initWithEvent:(DDCalendarEvent*)event;
 
+@property(nonatomic, strong) UIColor *activeBackgroundColor;
+@property(nonatomic, strong) UIColor *inactiveBackgroundColor;
+
 @property(nonatomic, strong, readonly) DDCalendarEvent *event;
 @property(nonatomic, assign) BOOL active;
 

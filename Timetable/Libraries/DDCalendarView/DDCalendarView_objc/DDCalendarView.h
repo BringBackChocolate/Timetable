@@ -32,7 +32,7 @@ IB_DESIGNABLE
 
 @optional
 - (void)calendarView:(DDCalendarView* _Nonnull)view focussedOnDay:(NSDate* _Nonnull)date;
-- (void)calendarView:(DDCalendarView* _Nonnull)view didSelectEvent:(DDCalendarEvent* _Nonnull)event;
+- (void)calendarView:(DDCalendarView* _Nonnull)view didSelectEvent:(DDCalendarEvent* _Nonnull)event withView:(DDCalendarEventView*_Nonnull)eventView;
 - (BOOL)calendarView:(DDCalendarView* _Nonnull)view allowEditingEvent:(DDCalendarEvent* _Nonnull)event;
 - (void)calendarView:(DDCalendarView* _Nonnull)view commitEditEvent:(DDCalendarEvent* _Nonnull)event; //if allow editing returns yes, this is mandatory
 

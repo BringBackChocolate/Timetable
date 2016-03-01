@@ -33,6 +33,8 @@
         [self addSubview:self.label];
 
         self.event = event;
+        self.activeBackgroundColor=[[UIColor redColor] colorWithAlphaComponent:1];
+        self.inactiveBackgroundColor=[self.activeBackgroundColor colorWithAlphaComponent:0.5];
         self.active = NO;
     }
     return self;
@@ -55,16 +57,13 @@
 
 - (void)setActive:(BOOL)active {
     _active = active;
-    
-    UIColor *c = [UIColor redColor];
-        
     if(_active) {
-        self.backgroundColor = [c colorWithAlphaComponent:0.8];
-        self.layer.borderColor = c.CGColor;
-        self.layer.borderWidth = 1;
+        self.backgroundColor = self.activeBackgroundColor;
+        self.layer.borderColor = nil;
+        self.layer.borderWidth = 0;
     }
     else {
-        self.backgroundColor = [c colorWithAlphaComponent:0.5];
+        self.backgroundColor = self.inactiveBackgroundColor;
         self.layer.borderColor = nil;
         self.layer.borderWidth = 0;
     }
@@ -82,12 +81,21 @@
     UIGraphicsEndImageContext();
     
     UIImageView * imageViewForAnimation = [[UIImageView alloc] initWithImage:image];
-    imageViewForAnimation.backgroundColor = [UIColor clearColor];
+    imageViewForAnimation.backgroundColor = self.backgroundColor;
 
     self.active = oldActive;
     self.frame = oldFrame;
     
     return imageViewForAnimation;
 }
-
+-(void) setActiveBackgroundColor:(UIColor *)activeBackgroundColor
+{
+    if(activeBackgroundColor==NULL){return;}
+    _activeBackgroundColor=activeBackgroundColor;
+}
+-(void) setInactiveBackgroundColor:(UIColor *)inactiveBackgroundColor
+{
+    if(inactiveBackgroundColor==NULL){return;}
+    _inactiveBackgroundColor=inactiveBackgroundColor;
+}
 @end

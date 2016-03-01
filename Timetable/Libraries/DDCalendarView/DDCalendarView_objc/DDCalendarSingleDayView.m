@@ -272,12 +272,12 @@
     
     if(activeEV != ev) {
         ev.active = YES;
-
         id<DDCalendarViewDelegate> delegate = self.calendar.delegate;
-        
+        activeEV.active=NO;
+        self.activeEventView=ev;
         //tell click to delegate
-        if([delegate respondsToSelector:@selector(calendarView:didSelectEvent:)]) {
-            [delegate calendarView:self.calendar didSelectEvent:ev.event];
+        if([delegate respondsToSelector:@selector(calendarView:didSelectEvent:withView:)]) {
+            [delegate calendarView:self.calendar didSelectEvent:ev.event withView:ev];
         }
     }
     else if(activeEV==ev) {

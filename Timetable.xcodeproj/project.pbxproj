@@ -25,6 +25,20 @@
 		410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F31C78D58100E49CB9 /* Extensions.swift */; };
 		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
+		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
+		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
+		41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DD1C85E2E4008A63DA /* DDCalendarSingleDayView.m */; };
+		41B850FA1C85E2E4008A63DA /* DDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DF1C85E2E4008A63DA /* DDCalendarView.m */; };
+		41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850E31C85E2E4008A63DA /* FFHourAndMinLabel.m */; };
+		41B850FC1C85E2E4008A63DA /* FFViewWithHourLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850E51C85E2E4008A63DA /* FFViewWithHourLines.m */; };
+		41B850FD1C85E2E4008A63DA /* UILabel+FFCustomMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850E71C85E2E4008A63DA /* UILabel+FFCustomMethods.m */; };
+		41B850FE1C85E2E4008A63DA /* NSDate+DDCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850E91C85E2E4008A63DA /* NSDate+DDCalendar.m */; };
+		41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850ED1C85E2E4008A63DA /* OBDragDropManager.m */; };
+		41B851001C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850F01C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m */; };
+		41B851011C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850F21C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m */; };
+		41B851021C85E2E4008A63DA /* UIView+OBDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850F41C85E2E4008A63DA /* UIView+OBDropZone.m */; };
+		41B851031C85E2E4008A63DA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 41B850F51C85E2E4008A63DA /* LICENSE */; };
+		41B851041C85E2E4008A63DA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 41B850F61C85E2E4008A63DA /* README.md */; };
 		41F273A01C7DE05A0057947F /* FacultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F2739F1C7DE05A0057947F /* FacultiesViewController.swift */; };
 		DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +66,35 @@
 		410BE3F31C78D58100E49CB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		410BE3F51C78D7CA00E49CB9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
+		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
+		41B850DA1C85E2E4008A63DA /* DDCalendarEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEventView.h; sourceTree = "<group>"; };
+		41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEventView.m; sourceTree = "<group>"; };
+		41B850DC1C85E2E4008A63DA /* DDCalendarSingleDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarSingleDayView.h; sourceTree = "<group>"; };
+		41B850DD1C85E2E4008A63DA /* DDCalendarSingleDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarSingleDayView.m; sourceTree = "<group>"; };
+		41B850DE1C85E2E4008A63DA /* DDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarView.h; sourceTree = "<group>"; };
+		41B850DF1C85E2E4008A63DA /* DDCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarView.m; sourceTree = "<group>"; };
+		41B850E01C85E2E4008A63DA /* DDCalendarViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarViewConstants.h; sourceTree = "<group>"; };
+		41B850E21C85E2E4008A63DA /* FFHourAndMinLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHourAndMinLabel.h; sourceTree = "<group>"; };
+		41B850E31C85E2E4008A63DA /* FFHourAndMinLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHourAndMinLabel.m; sourceTree = "<group>"; };
+		41B850E41C85E2E4008A63DA /* FFViewWithHourLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFViewWithHourLines.h; sourceTree = "<group>"; };
+		41B850E51C85E2E4008A63DA /* FFViewWithHourLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFViewWithHourLines.m; sourceTree = "<group>"; };
+		41B850E61C85E2E4008A63DA /* UILabel+FFCustomMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FFCustomMethods.h"; sourceTree = "<group>"; };
+		41B850E71C85E2E4008A63DA /* UILabel+FFCustomMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FFCustomMethods.m"; sourceTree = "<group>"; };
+		41B850E81C85E2E4008A63DA /* NSDate+DDCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDCalendar.h"; sourceTree = "<group>"; };
+		41B850E91C85E2E4008A63DA /* NSDate+DDCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDCalendar.m"; sourceTree = "<group>"; };
+		41B850EB1C85E2E4008A63DA /* OBDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDrop.h; sourceTree = "<group>"; };
+		41B850EC1C85E2E4008A63DA /* OBDragDropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDropManager.h; sourceTree = "<group>"; };
+		41B850ED1C85E2E4008A63DA /* OBDragDropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBDragDropManager.m; sourceTree = "<group>"; };
+		41B850EE1C85E2E4008A63DA /* OBDragDropProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDropProtocol.h; sourceTree = "<group>"; };
+		41B850EF1C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBLongPressDragDropGestureRecognizer.h; sourceTree = "<group>"; };
+		41B850F01C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBLongPressDragDropGestureRecognizer.m; sourceTree = "<group>"; };
+		41B850F11C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+OBDragDrop.h"; sourceTree = "<group>"; };
+		41B850F21C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+OBDragDrop.m"; sourceTree = "<group>"; };
+		41B850F31C85E2E4008A63DA /* UIView+OBDropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OBDropZone.h"; sourceTree = "<group>"; };
+		41B850F41C85E2E4008A63DA /* UIView+OBDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OBDropZone.m"; sourceTree = "<group>"; };
+		41B850F51C85E2E4008A63DA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		41B850F61C85E2E4008A63DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41F2739F1C7DE05A0057947F /* FacultiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesViewController.swift; sourceTree = "<group>"; };
 		B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +133,7 @@
 		410BE3C81C788E2500E49CB9 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				41B850D51C85E2E4008A63DA /* Libraries */,
 				419764841C7DCDB5006A2837 /* Search */,
 				410BE3E21C78A70700E49CB9 /* DB */,
 				410BE3C91C788E2600E49CB9 /* AppDelegate.swift */,
@@ -129,6 +173,74 @@
 				41F2739F1C7DE05A0057947F /* FacultiesViewController.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		41B850D51C85E2E4008A63DA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				41B850D61C85E2E4008A63DA /* DDCalendarView */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		41B850D61C85E2E4008A63DA /* DDCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				41B850D71C85E2E4008A63DA /* DDCalendarView_objc */,
+				41B850F51C85E2E4008A63DA /* LICENSE */,
+				41B850F61C85E2E4008A63DA /* README.md */,
+			);
+			path = DDCalendarView;
+			sourceTree = "<group>";
+		};
+		41B850D71C85E2E4008A63DA /* DDCalendarView_objc */ = {
+			isa = PBXGroup;
+			children = (
+				41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */,
+				41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */,
+				41B850DA1C85E2E4008A63DA /* DDCalendarEventView.h */,
+				41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */,
+				41B850DC1C85E2E4008A63DA /* DDCalendarSingleDayView.h */,
+				41B850DD1C85E2E4008A63DA /* DDCalendarSingleDayView.m */,
+				41B850DE1C85E2E4008A63DA /* DDCalendarView.h */,
+				41B850DF1C85E2E4008A63DA /* DDCalendarView.m */,
+				41B850E01C85E2E4008A63DA /* DDCalendarViewConstants.h */,
+				41B850E11C85E2E4008A63DA /* FFViewWithHourLines */,
+				41B850E81C85E2E4008A63DA /* NSDate+DDCalendar.h */,
+				41B850E91C85E2E4008A63DA /* NSDate+DDCalendar.m */,
+				41B850EA1C85E2E4008A63DA /* OBDragDrop */,
+			);
+			path = DDCalendarView_objc;
+			sourceTree = "<group>";
+		};
+		41B850E11C85E2E4008A63DA /* FFViewWithHourLines */ = {
+			isa = PBXGroup;
+			children = (
+				41B850E21C85E2E4008A63DA /* FFHourAndMinLabel.h */,
+				41B850E31C85E2E4008A63DA /* FFHourAndMinLabel.m */,
+				41B850E41C85E2E4008A63DA /* FFViewWithHourLines.h */,
+				41B850E51C85E2E4008A63DA /* FFViewWithHourLines.m */,
+				41B850E61C85E2E4008A63DA /* UILabel+FFCustomMethods.h */,
+				41B850E71C85E2E4008A63DA /* UILabel+FFCustomMethods.m */,
+			);
+			path = FFViewWithHourLines;
+			sourceTree = "<group>";
+		};
+		41B850EA1C85E2E4008A63DA /* OBDragDrop */ = {
+			isa = PBXGroup;
+			children = (
+				41B850EB1C85E2E4008A63DA /* OBDragDrop.h */,
+				41B850EC1C85E2E4008A63DA /* OBDragDropManager.h */,
+				41B850ED1C85E2E4008A63DA /* OBDragDropManager.m */,
+				41B850EE1C85E2E4008A63DA /* OBDragDropProtocol.h */,
+				41B850EF1C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.h */,
+				41B850F01C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m */,
+				41B850F11C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.h */,
+				41B850F21C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m */,
+				41B850F31C85E2E4008A63DA /* UIView+OBDropZone.h */,
+				41B850F41C85E2E4008A63DA /* UIView+OBDropZone.m */,
+			);
+			path = OBDragDrop;
 			sourceTree = "<group>";
 		};
 		92D1CC71505B6126E3BD676E /* Frameworks */ = {
@@ -212,6 +324,7 @@
 			files = (
 				410BE3D41C788E2600E49CB9 /* LaunchScreen.storyboard in Resources */,
 				410BE3D11C788E2600E49CB9 /* Assets.xcassets in Resources */,
+				41B851031C85E2E4008A63DA /* LICENSE in Resources */,
 				410BE3CF1C788E2600E49CB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,20 +384,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B851021C85E2E4008A63DA /* UIView+OBDropZone.m in Sources */,
+				41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */,
+				41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */,
+				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
+				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,
 				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,
+				41B850FC1C85E2E4008A63DA /* FFViewWithHourLines.m in Sources */,
 				4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */,
+				41B850FA1C85E2E4008A63DA /* DDCalendarView.m in Sources */,
 				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
 				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
+				41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */,
+				41B850FE1C85E2E4008A63DA /* NSDate+DDCalendar.m in Sources */,
+				41B851041C85E2E4008A63DA /* README.md in Sources */,
 				410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */,
 				410BE3E61C78BB1300E49CB9 /* JSON.swift in Sources */,
+				41B851011C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m in Sources */,
 				410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */,
 				410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */,
 				41F273A01C7DE05A0057947F /* FacultiesViewController.swift in Sources */,
 				410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */,
 				410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */,
+				41B851001C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m in Sources */,
 				410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */,
 				410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */,
 				410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */,
+				41B850FD1C85E2E4008A63DA /* UILabel+FFCustomMethods.m in Sources */,
 				410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */,
 				410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */,
 			);
