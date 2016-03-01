@@ -14,7 +14,7 @@ class Lesson : CustomStringConvertible
     var place=""
     var start=NSDate()
     var end=NSDate()
-    var teacher=""
+    var teachers=[String]()
     
     init(json:JSON,date:NSDate)
     {
@@ -38,15 +38,12 @@ class Lesson : CustomStringConvertible
             }
             place=room
         }
-        let teachers=json["teacher"]
-        var i=0
-        for (_,obj) in teachers
+        let teachersJSON=json["teachers"]
+        for (_,obj) in teachersJSON
         {
             if obj["full_name"].isString
             {
-                if i==0{teacher=obj["full_name"].asString!}
-                else{teacher="\(teacher), \(obj["full_name"].asString!)"}
-                i++
+                teachers.append(obj["full_name"].asString!)
             }
         }
         if json["time_start"].isString
@@ -71,6 +68,19 @@ class Lesson : CustomStringConvertible
         return res
     }
     var placeString:String{return place}
+    var teachersString:String
+    {
+        var res=""
+        if(teachers.count>0)
+        {
+            for teacher in teachers
+            {
+                res+=teacher+" "
+            }
+            res=res.substringToIndex(res.endIndex.predecessor())
+        }
+        return res
+    }
     var description:String
     {
         return "\(start.timeString)\n\(name)\n\(placeString)"

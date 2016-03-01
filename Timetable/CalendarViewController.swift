@@ -122,7 +122,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
             let event=DDCalendarEvent()
             event.dateBegin=l.start
             event.dateEnd=l.end
-            event.title="\(l.name)\n\(l.placeString)\n\(l.teacher)"
+            event.title="\(l.name)\n\(l.placeString)\n\(l.teachersString)"
             events.append(event)
         }
         if(events.count>0)
