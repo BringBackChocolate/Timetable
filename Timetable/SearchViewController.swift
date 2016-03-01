@@ -7,6 +7,10 @@
 //
 
 import Foundation
+class UITableViewCellWithIcon:UITableViewCell
+{
+    var iconView:UIImageView?
+}
 class SearchViewController : UIViewController , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
 {
     var groups=[Group]()
@@ -17,7 +21,7 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
     var selectedGroup:Group?
     override func viewDidLoad()
     {
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"GROUP")
+        self.tableView.registerClass(UITableViewCellWithIcon.self, forCellReuseIdentifier:"GROUP")
         super.viewDidLoad()
         tableView.delegate=self
         if(faculty==nil){return}
@@ -54,12 +58,36 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let groupIdx=indexPath.row
-        let cell = tableView.dequeueReusableCellWithIdentifier("GROUP",forIndexPath:indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("GROUP",forIndexPath:indexPath) as!UITableViewCellWithIcon
         let group=filteredGroups[groupIdx]
         cell.textLabel?.text = "\(group.name)"
         cell.tintColor=tableView.tintColor
         cell.textLabel?.textColor=UIColor.whiteColor()
         cell.backgroundColor=tableView.backgroundColor
+        if(TTDB.groupIsFav(group))
+        {
+            if(cell.iconView==nil)
+            {
+                if var img=UIImage(named:"Bookmark-Filled")
+                {
+                    img=img.ipMaskedImage(UIColor.whiteColor())
+                    let imgView=UIImageView(image:img)
+                    cell.addSubview(imgView)
+                    let views = ["imgView": imgView]
+                    let hConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:[imgView]-10-|",
+                                    options: NSLayoutFormatOptions.AlignAllCenterY,metrics:nil,views:views)
+                    cell.addConstraint(hConstraint[0])
+                    imgView.frame=CGRectMake(cell.frame.width-img.size.width-10,5,
+                        img.size.width,img.size.height)
+                    cell.iconView=imgView
+                }
+            }
+        }
+        else
+        {
+            cell.iconView?.removeFromSuperview()
+            cell.iconView=nil
+        }
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)

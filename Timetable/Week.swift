@@ -18,7 +18,7 @@ class Week
     init(json:JSON)
     {
         let weekJSON=json["week"]
-        Week.dateFormatter.dateFormat="yyy.mm.dd"
+        Week.dateFormatter.dateFormat="yyyy.MM.dd"
         if weekJSON["is_odd"].isBool
         {
             isOdd=weekJSON["is_odd"].asBool!

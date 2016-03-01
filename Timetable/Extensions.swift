@@ -11,10 +11,10 @@ extension NSDate
 {
     func dateBySettingTime(time:String)->NSDate
     {
-        var date=NSDate()
+        var date=self.startOfDay
         let hoursStr=time.componentsSeparatedByString(":")[0]
         let minutesStr=time.componentsSeparatedByString(":")[1]
-        date=self.dateByAddingTimeInterval(60*60*Double(hoursStr)!)
+        date=date.dateByAddingTimeInterval(60*60*Double(hoursStr)!)
         date=date.dateByAddingTimeInterval(60*Double(minutesStr)!)
         return date
     }

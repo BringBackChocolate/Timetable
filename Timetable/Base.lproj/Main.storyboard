@@ -241,7 +241,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NM6-Bt-SYw" id="h4N-KB-kIK">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.1215686275" green="0.70196078429999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -263,7 +263,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KW5-C2-Qf4">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="wjZ-NF-0P3">
+                        <barButtonItem key="rightBarButtonItem" image="Bookmarks" style="plain" id="wjZ-NF-0P3">
                             <connections>
                                 <segue destination="gHU-ld-hIo" kind="show" identifier="showBookmarks" id="MpG-bu-54s"/>
                             </connections>
@@ -284,12 +284,14 @@
                         <outlet property="searchResultsDelegate" destination="LjF-yQ-BrM" id="zgb-pj-ipL"/>
                     </connections>
                 </searchDisplayController>
+                <barButtonItem style="plain" systemItem="bookmarks" id="w9A-VS-A6g"/>
             </objects>
             <point key="canvasLocation" x="1273" y="522"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Bookmark" width="25" height="25"/>
+        <image name="Bookmark" width="50" height="50"/>
+        <image name="Bookmarks" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PxW-OJ-vHX"/>

@@ -15,7 +15,7 @@ class Day
     
     init(json:JSON)
     {
-        Week.dateFormatter.dateFormat="yyy-mm-dd"
+        Week.dateFormatter.dateFormat="yyyy-MM-dd"
         if json["weekday"].isInt
         {
             weekday=json["weekday"].asInt!
