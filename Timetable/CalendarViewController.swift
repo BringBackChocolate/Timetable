@@ -93,14 +93,14 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         return calendarAttributes
     }
     func reloadShedulde(shedulde:Shedulde,forDate date:NSDate)
-    {
+    {dispatch_async(dispatch_get_global_queue(0,0),{
         let comp=NSCalendar.currentCalendar().components(NSCalendarUnit.Weekday,fromDate:date)
         if let currentDay=shedulde.week?.getDay(comp.weekday)
         {
-            showLessons(currentDay.lessons)
-        }else{showLessons(nil)}
+            self.showLessons(currentDay.lessons)
+        }else{self.showLessons(nil)}
         dispatch_async(dispatch_get_main_queue(),{self.eventsView.date=date})
-    }
+    })}
     func showLessons(l:[Lesson]?)
     {dispatch_async(dispatch_get_main_queue(),{
         if let lessons=l
