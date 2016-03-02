@@ -55,6 +55,7 @@
         pagingView.pagingEnabled = YES;
         pagingView.directionalLockEnabled = YES;
         pagingView.delegate = self;
+        pagingView.scrollEnabled = NO;
         [pagingView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self addSubview:pagingView];
         self.pagingView = pagingView;

@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="80" id="Ugw-gs-xxL"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-Zc-aFQ" customClass="DDCalendarView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-Zc-aFQ" customClass="DDCalendarView">
                                 <rect key="frame" x="0.0" y="144" width="600" height="412"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2979" y="516"/>
+            <point key="canvasLocation" x="2839" y="502"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hTg-u2-9Ec">
@@ -189,13 +189,15 @@
             <objects>
                 <splitViewController id="vXJ-VO-6MQ" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="rqt-ZQ-gEV" kind="relationship" relationship="masterViewController" id="4cA-J1-9ki"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="dgE-36-gUa"/>
+                        <outlet property="delegate" destination="Iij-Vb-D2v" id="cpN-qy-xfK"/>
+                        <segue destination="rqt-ZQ-gEV" kind="relationship" relationship="masterViewController" id="xuQ-nx-HbL"/>
+                        <segue destination="hCu-y9-wbH" kind="relationship" relationship="detailViewController" id="Y7b-OD-IRR"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoj-rS-ZpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Iij-Vb-D2v" customClass="SplitViewDelegate" customModule="Timetable" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-355"/>
+            <point key="canvasLocation" x="1618" y="-283"/>
         </scene>
         <!--Bookmarks View Controller-->
         <scene sceneID="Ouw-DH-cvC">
@@ -246,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rL-et-2fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="1515"/>
+            <point key="canvasLocation" x="1188" y="1279"/>
         </scene>
         <!--Faculties View Controller-->
         <scene sceneID="Gpq-nf-CFE">
@@ -349,7 +351,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaJ-KV-8AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008" y="482"/>
+            <point key="canvasLocation" x="2008" y="510"/>
         </scene>
     </scenes>
     <resources>
@@ -358,7 +360,6 @@
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VLw-yq-qsj"/>
-        <segue reference="BJa-5Q-5aT"/>
+        <segue reference="Y7b-OD-IRR"/>
     </inferredMetricsTieBreakers>
 </document>

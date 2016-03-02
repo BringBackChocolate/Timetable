@@ -7,6 +7,7 @@
 //
 
 import UIKit
+class CalendarNavigationController:UINavigationController{}
 
 class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDCalendarViewDataSource,DDCalendarViewDelegate
 {
@@ -35,6 +36,12 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
             })
         })
         if let g=group{TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)}
+        else
+        {
+            eventsView.removeFromSuperview()
+            weekView.removeFromSuperview()
+            //view.backgroundColor=UIColor.polytechColor()
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     func dailyCalendarViewDidSelect(date:NSDate)
@@ -62,11 +69,17 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         {
             setBarButtonItem(TTDB.groupIsFav(g))
         }
+        else
+        {
+            favButton.enabled=false
+            favButton.tintColor=UIColor.clearColor()
+        }
     }
     override func viewDidAppear(animated:Bool)
     {
         if group==nil
         {
+            
             self.navigationController?.popViewControllerAnimated(animated)
         }
         self.navigationController?.setNavigationBarHidden(false,animated:animated)
@@ -137,7 +150,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
             if view.date.startOfDay != dateToScroll.startOfDay{
                 view.date=dateToScroll}
             //print("scrollDateToVisible(\(dateToScroll))")
-            view.scrollDateToVisible(dateToScroll, animated:true)
+            //view.scrollDateToVisible(dateToScroll, animated:true)
         })}
         return events
     }
@@ -161,11 +174,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     }
     func calendarView(view: DDCalendarView, didSelectEvent event: DDCalendarEvent,withView eventView: DDCalendarEventView) {
         //eventView.active=false
-    }
-    func calendarView(view: DDCalendarView, focussedOnDay date: NSDate) {
-        if(weekView==nil){return}
-        view.date=weekView.selectedDate
-    }
+    }    
     @IBAction func favButtonPressed()
     {
         if let g=group
