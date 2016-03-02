@@ -284,7 +284,14 @@
                             <constraint firstItem="U9X-w1-aSj" firstAttribute="top" secondItem="zmN-LK-Um5" secondAttribute="bottom" id="mV5-GN-G2v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t8r-DY-l6P"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="t8r-DY-l6P">
+                        <barButtonItem key="rightBarButtonItem" image="Bookmarks" width="22" style="plain" id="Syr-Ti-OvJ">
+                            <connections>
+                                <segue destination="gHU-ld-hIo" kind="show" identifier="showBookmarks" id="TAu-fp-6Op"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="U9X-w1-aSj" id="b9p-y2-QDq"/>
                         <outlet property="tableView" destination="gMm-Fa-Vxp" id="fbq-Md-pTP"/>
@@ -472,6 +479,7 @@
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y7b-OD-IRR"/>
+        <segue reference="TAu-fp-6Op"/>
+        <segue reference="Y7P-RM-hAS"/>
     </inferredMetricsTieBreakers>
 </document>
