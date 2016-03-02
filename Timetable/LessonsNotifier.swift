@@ -43,6 +43,7 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
         LNNotificationCenter.defaultCenter().registerApplicationWithIdentifier("timetable",
             name:appname, icon:UIImage(named:"PolyTech")!, defaultSettings:self)
         }
+        TTDB.bookmarksListener=self
     }
     func sheduldeNotfications(shedulde:Shedulde)
     {
