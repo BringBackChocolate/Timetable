@@ -70,10 +70,13 @@ class BookmarksViewController: UIViewController , UITableViewDataSource , UITabl
     {
         if(segue.identifier=="showTimetable")
         {
-            if let vc=segue.destinationViewController as?CalendarViewController
+            if let nvc=segue.destinationViewController as?UINavigationController
             {
-                vc.group=selectedGroup
-            }
+                if let vc=nvc.viewControllers.first as?CalendarViewController
+                {
+                    vc.group=selectedGroup
+                }
+            }            
         }
         super.prepareForSegue(segue,sender:sender)
     }

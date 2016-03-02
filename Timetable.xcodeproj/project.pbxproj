@@ -137,6 +137,7 @@
 				419764841C7DCDB5006A2837 /* Search */,
 				410BE3E21C78A70700E49CB9 /* DB */,
 				410BE3C91C788E2600E49CB9 /* AppDelegate.swift */,
+				DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */,
 				410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */,
 				410BE3CD1C788E2600E49CB9 /* Main.storyboard */,
 				410BE3D01C788E2600E49CB9 /* Assets.xcassets */,
@@ -145,7 +146,6 @@
 				410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */,
 				410BE3DC1C78965C00E49CB9 /* Globals.swift */,
 				410BE3F51C78D7CA00E49CB9 /* Preferences.swift */,
-				DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
