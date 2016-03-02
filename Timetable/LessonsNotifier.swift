@@ -12,13 +12,19 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
     static let instance=LessonsNotifier()
     var onceToken:dispatch_once_t=0;
     let notificationsBlock={
-        if let myGroup=TTDB.bookmarks.first
+        if(Settings.i.showNotifications)
         {
-            let sh=TTDB.loadSheduldeForGroup(myGroup.id)
-            LessonsNotifier.instance.sheduldeNotfications(sh)
-            LessonsNotifier.instance.sheduldeNotificationAt(NSDate(),
-                title:"Notifications updated",
-                message:":D")
+            if let myGroup=TTDB.bookmarks.first
+            {
+                let sh=TTDB.loadSheduldeForGroup(myGroup.id)
+                LessonsNotifier.instance.sheduldeNotfications(sh)
+                if(Settings.i.showNotificationOnUpdate)
+                {
+                    LessonsNotifier.instance.sheduldeNotificationAt(NSDate(),
+                        title:"Notifications updated",
+                        message:":D")
+                }
+            }
         }
     }
     func updateNotifications()
