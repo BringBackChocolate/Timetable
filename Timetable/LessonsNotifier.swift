@@ -62,7 +62,10 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
                     let message=lesson.placeString
                     let title=lesson.name
                     let date=lesson.start
-                    self.sheduldeNotificationAt(date,title:title,message:message)
+                    if NSDate().dateByAddingTimeInterval(-600).compare(date) == .OrderedAscending
+                    {
+                        self.sheduldeNotificationAt(date,title:title,message:message)
+                    }
                 }
             }
         }
