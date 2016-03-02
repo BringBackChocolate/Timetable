@@ -10,6 +10,21 @@ import Foundation
 class LessonsNotifier:LNNotificationAppSettings
 {
     static let instance=LessonsNotifier()
+    let notificationsBlock={
+        if let myGroup=TTDB.bookmarks.first
+        {
+            let sh=TTDB.loadSheduldeForGroup(myGroup.id)
+            LessonsNotifier.instance.sheduldeNotfications(sh)
+            LessonsNotifier.instance.sheduldeNotificationAt(NSDate(),
+                title:"Notifications updated",
+                message:":D")
+        }
+    }
+    func updateNotifications()
+    {
+        self.notificationsBlock()
+        if(TTDB.bookmarks.count>0){EVERY_INTERVAL(1,self.notificationsBlock)}
+    }
     override init()
     {
         super.init()
