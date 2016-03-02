@@ -68,10 +68,10 @@ class SearchViewController : UIViewController , UITableViewDataSource , UITableV
         {
             if(cell.iconView==nil)
             {
-                if var img=UIImage(named:"Bookmark-Filled")
+                if let img=UIImage(named:"Bookmark-Filled")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
                 {
-                    img=img.ipMaskedImage(UIColor.whiteColor())
                     let imgView=UIImageView(image:img)
+                    imgView.tintColor=UIColor.whiteColor()
                     cell.addSubview(imgView)
                     let views = ["imgView": imgView]
                     let hConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:[imgView]-10-|",
