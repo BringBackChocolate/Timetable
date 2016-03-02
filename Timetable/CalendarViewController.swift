@@ -14,6 +14,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     @IBOutlet var weekView:CLWeeklyCalendarView!
     @IBOutlet var eventsView:DDCalendarView!
     @IBOutlet var favButton:UIBarButtonItem!
+    @IBOutlet var polytechImage:UIImageView!
     var group:Group?
     var dateSelected=NSDate()
     var selectedDayLessons=[Lesson]()
@@ -39,13 +40,17 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         {
             TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)
             self.splitViewController?.preferredDisplayMode = .Automatic
+            polytechImage.hidden=true
         }
         else
         {
             self.splitViewController?.preferredDisplayMode = .AllVisible
             eventsView.removeFromSuperview()
+            eventsView=nil
             weekView.removeFromSuperview()
-            //view.backgroundColor=UIColor.polytechColor()
+            weekView=nil
+            view.backgroundColor=UIColor.polytechColor()
+            polytechImage.hidden=false
         }
         // Do any additional setup after loading the view, typically from a nib.
     }

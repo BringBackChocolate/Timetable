@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXJ-VO-6MQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXJ-VO-6MQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,37 +23,34 @@
                                     <constraint firstAttribute="height" constant="80" id="Ugw-gs-xxL"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-Zc-aFQ" customClass="DDCalendarView">
-                                <rect key="frame" x="0.0" y="144" width="600" height="412"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-Zc-aFQ" customClass="DDCalendarView">
+                                <rect key="frame" x="0.0" y="144" width="600" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="5Na-FL-tbk"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="BSk-ah-eO8"/>
                                 </connections>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PolyTech" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-CF-jZo">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4Gl-kI-C8p"/>
+                                    <constraint firstAttribute="width" constant="100" id="o71-RF-hDl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rwF-bf-zXd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ma-uY-GKE"/>
-                            <constraint firstItem="L9N-Zc-aFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D4h-qS-aET"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" constant="8" symbolic="YES" id="OrP-4O-m8B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rwF-bf-zXd" secondAttribute="trailing" constant="-20" id="PwZ-5y-tYV"/>
+                            <constraint firstItem="Zyz-CF-jZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qbq-Nt-DMg"/>
                             <constraint firstItem="L9N-Zc-aFQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="TdJ-Xt-IiT"/>
                             <constraint firstItem="L9N-Zc-aFQ" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="Vvy-WO-e5q"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rwF-bf-zXd" secondAttribute="bottom" id="XPR-Ew-JjO"/>
+                            <constraint firstItem="Zyz-CF-jZo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WeW-Bw-trd"/>
                             <constraint firstItem="rwF-bf-zXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gCM-ZG-V12"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L9N-Zc-aFQ" secondAttribute="trailing" id="lsL-tx-0Wh"/>
                             <constraint firstItem="L9N-Zc-aFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sDG-lZ-rIt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9N-Zc-aFQ" secondAttribute="bottom" id="vW7-ga-Mh2"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="D4h-qS-aET"/>
-                                <exclude reference="lsL-tx-0Wh"/>
-                                <exclude reference="OrP-4O-m8B"/>
-                                <exclude reference="XPR-Ew-JjO"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vrO-Ti-ssx">
                         <barButtonItem key="rightBarButtonItem" image="Bookmark" width="22" style="plain" id="MBI-Wd-jj8">
@@ -66,6 +63,7 @@
                     <connections>
                         <outlet property="eventsView" destination="L9N-Zc-aFQ" id="I7z-AL-tGt"/>
                         <outlet property="favButton" destination="MBI-Wd-jj8" id="SrZ-EJ-SCn"/>
+                        <outlet property="polytechImage" destination="Zyz-CF-jZo" id="oMt-sd-KS4"/>
                         <outlet property="weekView" destination="rwF-bf-zXd" id="oVG-F4-QgD"/>
                     </connections>
                 </viewController>
@@ -355,6 +353,7 @@
     <resources>
         <image name="Bookmark" width="50" height="50"/>
         <image name="Bookmarks" width="64" height="64"/>
+        <image name="PolyTech" width="416" height="416"/>
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
