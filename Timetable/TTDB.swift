@@ -259,7 +259,7 @@ class TTDB
     }
     static var bookmarksListener:BookmarksListener?
     static func loadBookmarks()
-    {
+    {dispatch_sync(bookmarksQueue,{
         if let json=jsonFromFile("bookmarks.json")
         {
             for (_,s) in json
@@ -271,7 +271,7 @@ class TTDB
         {
             save("[]",toFile:"bookmarks.json")
         }
-    }
+    })}
     static var jsonArrayBookmarks:[JSON]
     {
         var res=[JSON]()
@@ -281,8 +281,9 @@ class TTDB
         }
         return res
     }
+    static let bookmarksQueue=dispatch_queue_create("com.cander.spbstu.Timetable.bookmarks",nil)
     static func saveBookmarks()
-    {
+    {dispatch_async(bookmarksQueue,{
         let json=JSON(jsonArrayBookmarks)
         let newStr=json.toString()
         if let oldStr=loadFromFile("bookmarks.json")
@@ -290,7 +291,7 @@ class TTDB
             if oldStr == newStr {return}
         }
         save(newStr, toFile: "bookmarks.json")
-    }
+    })}
     static func addBookmark(bookmark:Group,silent:Bool=false)
     {
         if(!bookmarks.contains(bookmark))
