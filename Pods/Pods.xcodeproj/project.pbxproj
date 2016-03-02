@@ -7,28 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040566171F853E3F34813441C696297A /* NSDate+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = 816156AAF676C8D5AFCDD970EFAB9C37 /* NSDate+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		056D2BB319BD4BD5F85FA1053249CF49 /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BCB8E39ABF8214B9D1044C2B905CD5 /* UIColor+CL.m */; };
-		4871F1B287313A7B0A3712EEDFB57DF7 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3259836E1D4CE5D77ACA7FE70A1246D9 /* CLWeeklyCalendarView.m */; };
-		4FB8E4F6B5DE55B2616781C60951C8EA /* CLWeeklyCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1581EEE0AF02CCF881ADA30B0A901C /* CLWeeklyCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		040566171F853E3F34813441C696297A /* NSDate+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = CCBE80865ED6AFFA80EC7C3F19F2C2BA /* NSDate+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		056D2BB319BD4BD5F85FA1053249CF49 /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1043C2F7E05ED4485EA2C544B3D8B /* UIColor+CL.m */; };
+		2437B3739FE6F64142806040CE95B6A2 /* LNNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBF49756B77B29701D894D86654319A /* LNNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B5E05527EFB5636DEA21BE43F41178C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		3CA443393CD959332979F7CC1331CC44 /* LNNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF67DE1BD5578E9686700D470647B76 /* LNNotificationCenter.m */; };
+		426B7654ED0E40C564E3A778B431845B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4871F1B287313A7B0A3712EEDFB57DF7 /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7790166D9415872ACE5ADE8F518049A /* CLWeeklyCalendarView.m */; };
+		4FB8E4F6B5DE55B2616781C60951C8EA /* CLWeeklyCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F738BBC538E1DD44432FE5A0EE69FFA /* CLWeeklyCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65B73E294E54C65F2D191FAAD45F6137 /* LNNotificationBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AD79BDDBA2CD8C9C2DE554FD8CD414 /* LNNotificationBannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66FA6E444566F1FC1F3012468B78C9EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6B490842D38D1C36953EB6C5F5ECC07D /* NSDictionary+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = F9215578C4491A85F07CE98C677A4D73 /* NSDictionary+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77A4BA1971D930640347A0FF98B0DF43 /* DayTitleLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E3A413C731BCFB07FDE1C4CCCCE92D /* DayTitleLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C52ACD9CD7BF0DF70E462400C349BCE /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE06FB5492254CA2CA098BF4794BE8A /* DailyCalendarView.m */; };
-		A789E80ACA0EED17AB4C299FCD679BA5 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADB68580F6988B540742CF999C69DEF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		BC2EFB6A4875250381A384514FCA2325 /* NSDate+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE540E6C46AC7E54F746AFCE8D5F3E /* NSDate+CL.m */; };
-		C014895F199AF3EE6F20FF9B909117BC /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CD50BED11404EB38AD515418F1E44D /* NSDictionary+CL.m */; };
-		C054AB52D1A022B2F8481FE4DC182671 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		CD939051D75CB6371DA7B9BD26042804 /* CLWeeklyCalendarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D5BFFC44B134A81D5D93489C2ABA3 /* CLWeeklyCalendarView-dummy.m */; };
-		D3BB3A03604426382FB795E6BD8511BA /* UIColor+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC99DF5A36F770EF09AE3D79AF0D244 /* UIColor+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D72BC8324D71F02E9A93E4DBB3EA9501 /* CLWeeklyCalendarView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B89AA7DA53C4AC20664A63C6B9CFC4 /* CLWeeklyCalendarView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6657CE482784DD5C637C1B279E98077 /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 517296EA5A977170183D11A404722E9F /* DayTitleLabel.m */; };
-		FFB0031AAF796AED945177C3907FBEDD /* DailyCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1383D153AF640C6D698E8BE97AD23F28 /* DailyCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B490842D38D1C36953EB6C5F5ECC07D /* NSDictionary+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = D774B147F1375923C84335D1BCC2E23E /* NSDictionary+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		737006AF306AD725D90868D8E078ECC4 /* LNNotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DDC10C39B5F27CA6DEA58EB1367E64 /* LNNotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77A4BA1971D930640347A0FF98B0DF43 /* DayTitleLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6985A9451214613110F91B95E253A1EE /* DayTitleLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B418CEDA111F280F78616BDD9D51EAA /* LNNotificationsAppSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBA6C7CB30BC3515C49F603BAA4947C /* LNNotificationsAppSettingsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C52ACD9CD7BF0DF70E462400C349BCE /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04202037B6305F5B4DCAFE268F23C8BE /* DailyCalendarView.m */; };
+		85D3AF992D50D819641A12C3363FBB60 /* LNNotificationAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C41D55EDD5B978702141A1D77F82E0E /* LNNotificationAppSettings.m */; };
+		91C928ABFC9CFAF458D58D7988F814EC /* LNNotificationAppSettings_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 668BA1B172E0124399ED99043C6E929D /* LNNotificationAppSettings_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92B450155FD3482E9AE26708603FD7FE /* LNNotificationBannerWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 26581669D3C53B55546DD8A5052EB395 /* LNNotificationBannerWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CC4B16E0A2FEB2B871791A58A02367A /* LNNotificationSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC114DAE46FBF7A0A8162E2766BC740E /* LNNotificationSettingsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A83B6FED013C03016F6D46A1F60E44E6 /* LNNotificationsUI.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB3A67A1B71691C5F111CF75C9395DE /* LNNotificationsUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4A3AE8701D0E33523ECE3D77B8F4574 /* LNNotificationSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFD12BB3F9BBE9565FC0182CFF869C8 /* LNNotificationSettingsController.m */; };
+		B4D1375C3EFEC278099E24773AAB7A13 /* LNNotificationsAppSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BC5C646DD4093F46E06904D44E57B8 /* LNNotificationsAppSettingsController.m */; };
+		B576391D358F1292B8868D2A0B560BA6 /* LNNotificationsUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C093C29D94A9915A7A94446DAC71B99 /* LNNotificationsUI-dummy.m */; };
+		B84B4E5C44CA16EE18BF3C75B76E21A3 /* LNNotificationBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8A384F15F40DA44AA68902E6046A32 /* LNNotificationBannerView.m */; };
+		B981D524908CEAA46D4BD6A3B7F52108 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC2EFB6A4875250381A384514FCA2325 /* NSDate+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = B2709F2360A681845898FA3DC0DF9E2E /* NSDate+CL.m */; };
+		C014895F199AF3EE6F20FF9B909117BC /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 60174F9A3B1111B34756652602755FD6 /* NSDictionary+CL.m */; };
+		C49967EF6388CDE35F66225D118BEB31 /* LNNotificationsUI_iOS7.1.h in Headers */ = {isa = PBXBuildFile; fileRef = 63295A6B642B5E12E2E3DE3825E85FB1 /* LNNotificationsUI_iOS7.1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD939051D75CB6371DA7B9BD26042804 /* CLWeeklyCalendarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3D9E706D2DA7929A1A547C798BFA6 /* CLWeeklyCalendarView-dummy.m */; };
+		D3BB3A03604426382FB795E6BD8511BA /* UIColor+CL.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2B2CC7C59CFE8AB615AC8F2E827AAE /* UIColor+CL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D52976BC950A1DCBF14B970EAF826B9C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		D72BC8324D71F02E9A93E4DBB3EA9501 /* CLWeeklyCalendarView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F633563C2FA045FBB148873D4F9445E /* CLWeeklyCalendarView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89F11D6D4244351B0B8FC598B5A7ABA /* LNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDA371C64575B5E04CA3AD5C31F0037 /* LNNotification.m */; };
+		DAC1753696D8086D017E10EEF84ABA5A /* LNNotificationBannerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A93418641F211557320A74D9A79193B0 /* LNNotificationBannerWindow.m */; };
+		E6657CE482784DD5C637C1B279E98077 /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470D5D2778DF9A75E2B640F85C3574B /* DayTitleLabel.m */; };
+		F2EA0C93154A507E302909B1B8521D92 /* LNNotificationAppSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5668A362EBB62915C33878DA84EE3B /* LNNotificationAppSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDAE7B58B98637AAD0A551A4A7CBAD7F /* LNNotificationsUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1836757B7777F125B65477D6ECE7D399 /* LNNotificationsUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFB0031AAF796AED945177C3907FBEDD /* DailyCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BB4C1317E8609E4B3AA3F59D1A2A659 /* DailyCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7351502DC740D5FA622F000E90B1A67A /* PBXContainerItemProxy */ = {
+		39596CDFDF5C9615580ADA966522892A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E91A19FD9971EA432EAAE0A204DA503;
+			remoteInfo = LNNotificationsUI;
+		};
+		4FCE8A22F30E96298F32E958EDDB3D61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -38,38 +65,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC99DF5A36F770EF09AE3D79AF0D244 /* UIColor+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/UIColor+CL.h"; sourceTree = "<group>"; };
-		11B89AA7DA53C4AC20664A63C6B9CFC4 /* CLWeeklyCalendarView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLWeeklyCalendarView-umbrella.h"; sourceTree = "<group>"; };
-		1383D153AF640C6D698E8BE97AD23F28 /* DailyCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DailyCalendarView.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DailyCalendarView.h; sourceTree = "<group>"; };
-		16AA84717C48094BAC9B246E534CD514 /* CLWeeklyCalendarView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLWeeklyCalendarView.xcconfig; sourceTree = "<group>"; };
-		1CB38C7951ED5936869A9D1F44D9C286 /* CLWeeklyCalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLWeeklyCalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		230D5BFFC44B134A81D5D93489C2ABA3 /* CLWeeklyCalendarView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLWeeklyCalendarView-dummy.m"; sourceTree = "<group>"; };
+		025EAB78B1E90F06F6EBEE47A41DA7C0 /* CLWeeklyCalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLWeeklyCalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04202037B6305F5B4DCAFE268F23C8BE /* DailyCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DailyCalendarView.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DailyCalendarView.m; sourceTree = "<group>"; };
+		04DDC10C39B5F27CA6DEA58EB1367E64 /* LNNotificationCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationCenter.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationCenter.h; sourceTree = "<group>"; };
+		0F696A7F8818028B8180CB2DCF32BC9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FBF49756B77B29701D894D86654319A /* LNNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotification.h; path = LNNotificationsUI/LNNotificationsUI/LNNotification.h; sourceTree = "<group>"; };
+		1109CA9BAFCBBAE5C5E293B9DAC20AAE /* CLWeeklyCalendarView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLWeeklyCalendarView.modulemap; sourceTree = "<group>"; };
+		15AD79BDDBA2CD8C9C2DE554FD8CD414 /* LNNotificationBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationBannerView.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationBannerView.h; sourceTree = "<group>"; };
+		1836757B7777F125B65477D6ECE7D399 /* LNNotificationsUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LNNotificationsUI-umbrella.h"; sourceTree = "<group>"; };
+		1ED1043C2F7E05ED4485EA2C544B3D8B /* UIColor+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/UIColor+CL.m"; sourceTree = "<group>"; };
+		2470D5D2778DF9A75E2B640F85C3574B /* DayTitleLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DayTitleLabel.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DayTitleLabel.m; sourceTree = "<group>"; };
+		26581669D3C53B55546DD8A5052EB395 /* LNNotificationBannerWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationBannerWindow.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationBannerWindow.h; sourceTree = "<group>"; };
+		27497B109C38F08BBE0B01ACA5544569 /* LNNotificationsUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LNNotificationsUI.xcconfig; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		3259836E1D4CE5D77ACA7FE70A1246D9 /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLWeeklyCalendarView.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/CLWeeklyCalendarView.m; sourceTree = "<group>"; };
+		3AB32F88AD04BAA72DFB19DAD2F11095 /* CLWeeklyCalendarView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLWeeklyCalendarView-prefix.pch"; sourceTree = "<group>"; };
+		3BB4C1317E8609E4B3AA3F59D1A2A659 /* DailyCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DailyCalendarView.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DailyCalendarView.h; sourceTree = "<group>"; };
+		3CBA6C7CB30BC3515C49F603BAA4947C /* LNNotificationsAppSettingsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationsAppSettingsController.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationsAppSettingsController.h; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		517296EA5A977170183D11A404722E9F /* DayTitleLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DayTitleLabel.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DayTitleLabel.m; sourceTree = "<group>"; };
-		51DD234229FA8BDB0D44DF41A006D655 /* CLWeeklyCalendarView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLWeeklyCalendarView-prefix.pch"; sourceTree = "<group>"; };
-		51E31A79F37C042107C1632E091B4FB7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67BCB8E39ABF8214B9D1044C2B905CD5 /* UIColor+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/UIColor+CL.m"; sourceTree = "<group>"; };
-		71CD50BED11404EB38AD515418F1E44D /* NSDictionary+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDictionary+CL.m"; sourceTree = "<group>"; };
+		4B2EB8894FA821F8227053F53C2B7608 /* LNNotificationsUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LNNotificationsUI-prefix.pch"; sourceTree = "<group>"; };
+		60174F9A3B1111B34756652602755FD6 /* NSDictionary+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDictionary+CL.m"; sourceTree = "<group>"; };
+		63295A6B642B5E12E2E3DE3825E85FB1 /* LNNotificationsUI_iOS7.1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationsUI_iOS7.1.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationsUI_iOS7.1.h; sourceTree = "<group>"; };
+		668BA1B172E0124399ED99043C6E929D /* LNNotificationAppSettings_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationAppSettings_Private.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationAppSettings_Private.h; sourceTree = "<group>"; };
+		6985A9451214613110F91B95E253A1EE /* DayTitleLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DayTitleLabel.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DayTitleLabel.h; sourceTree = "<group>"; };
+		6F633563C2FA045FBB148873D4F9445E /* CLWeeklyCalendarView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLWeeklyCalendarView-umbrella.h"; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		816156AAF676C8D5AFCDD970EFAB9C37 /* NSDate+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDate+CL.h"; sourceTree = "<group>"; };
+		7B0E70E07590688362CC9AC833EF03A6 /* CLWeeklyCalendarView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLWeeklyCalendarView.xcconfig; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		9034D88F2F14AF79D81C87033C1CF7C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C41D55EDD5B978702141A1D77F82E0E /* LNNotificationAppSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationAppSettings.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationAppSettings.m; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		AE108B5D93C2C2F32B50F84F536C29A4 /* CLWeeklyCalendarView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLWeeklyCalendarView.modulemap; sourceTree = "<group>"; };
+		9C093C29D94A9915A7A94446DAC71B99 /* LNNotificationsUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LNNotificationsUI-dummy.m"; sourceTree = "<group>"; };
+		9F738BBC538E1DD44432FE5A0EE69FFA /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLWeeklyCalendarView.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/CLWeeklyCalendarView.h; sourceTree = "<group>"; };
+		A0BC5C646DD4093F46E06904D44E57B8 /* LNNotificationsAppSettingsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationsAppSettingsController.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationsAppSettingsController.m; sourceTree = "<group>"; };
+		A93418641F211557320A74D9A79193B0 /* LNNotificationBannerWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationBannerWindow.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationBannerWindow.m; sourceTree = "<group>"; };
+		AA8E90417DF08B10034A28C25F705EDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5668A362EBB62915C33878DA84EE3B /* LNNotificationAppSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationAppSettings.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationAppSettings.h; sourceTree = "<group>"; };
+		B2709F2360A681845898FA3DC0DF9E2E /* NSDate+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDate+CL.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE1581EEE0AF02CCF881ADA30B0A901C /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLWeeklyCalendarView.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/CLWeeklyCalendarView.h; sourceTree = "<group>"; };
-		BFE06FB5492254CA2CA098BF4794BE8A /* DailyCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DailyCalendarView.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DailyCalendarView.m; sourceTree = "<group>"; };
-		C2E3A413C731BCFB07FDE1C4CCCCE92D /* DayTitleLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DayTitleLabel.h; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/DayTitleLabel.h; sourceTree = "<group>"; };
+		C3502EC433E587772918B743FAB9A5A5 /* LNNotificationsUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LNNotificationsUI.modulemap; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CDBE540E6C46AC7E54F746AFCE8D5F3E /* NSDate+CL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CL.m"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDate+CL.m"; sourceTree = "<group>"; };
+		CCBE80865ED6AFFA80EC7C3F19F2C2BA /* NSDate+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDate+CL.h"; sourceTree = "<group>"; };
+		CDF67DE1BD5578E9686700D470647B76 /* LNNotificationCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationCenter.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationCenter.m; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D774B147F1375923C84335D1BCC2E23E /* NSDictionary+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDictionary+CL.h"; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DA8A384F15F40DA44AA68902E6046A32 /* LNNotificationBannerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationBannerView.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationBannerView.m; sourceTree = "<group>"; };
+		DE2B2CC7C59CFE8AB615AC8F2E827AAE /* UIColor+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/UIColor+CL.h"; sourceTree = "<group>"; };
+		DFFD12BB3F9BBE9565FC0182CFF869C8 /* LNNotificationSettingsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotificationSettingsController.m; path = LNNotificationsUI/LNNotificationsUI/LNNotificationSettingsController.m; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9215578C4491A85F07CE98C677A4D73 /* NSDictionary+CL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CL.h"; path = "CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/Misc/NSDictionary+CL.h"; sourceTree = "<group>"; };
+		E8B16A94A54755C0F663A016B1034A20 /* LNNotificationsUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LNNotificationsUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB3D9E706D2DA7929A1A547C798BFA6 /* CLWeeklyCalendarView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLWeeklyCalendarView-dummy.m"; sourceTree = "<group>"; };
+		EC114DAE46FBF7A0A8162E2766BC740E /* LNNotificationSettingsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationSettingsController.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationSettingsController.h; sourceTree = "<group>"; };
+		ECB3A67A1B71691C5F111CF75C9395DE /* LNNotificationsUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNNotificationsUI.h; path = LNNotificationsUI/LNNotificationsUI/LNNotificationsUI.h; sourceTree = "<group>"; };
+		F7790166D9415872ACE5ADE8F518049A /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLWeeklyCalendarView.m; path = CLWeeklyCalendarView/CLWeeklyCalendarViewSourceCode/CLWeeklyCalendarView.m; sourceTree = "<group>"; };
+		FC928E8C5116651902F3EB266F98C951 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDA371C64575B5E04CA3AD5C31F0037 /* LNNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNNotification.m; path = LNNotificationsUI/LNNotificationsUI/LNNotification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,24 +132,91 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDBD1A03D39F6823C64F20F2FFD28573 /* Frameworks */ = {
+		9A0B2F97F93B9FD4BD406A2B80A66C92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB68580F6988B540742CF999C69DEF0 /* Foundation.framework in Frameworks */,
+				426B7654ED0E40C564E3A778B431845B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93D6B16573A09D9F79066DC8BDE2024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5E05527EFB5636DEA21BE43F41178C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52204D2E6E8606445AFB5D8CA09E34E8 /* Products */ = {
+		20D17EAE80050F6C568C1C71EAE43634 /* CLWeeklyCalendarView */ = {
 			isa = PBXGroup;
 			children = (
-				1CB38C7951ED5936869A9D1F44D9C286 /* CLWeeklyCalendarView.framework */,
-				51E31A79F37C042107C1632E091B4FB7 /* Pods.framework */,
+				9F738BBC538E1DD44432FE5A0EE69FFA /* CLWeeklyCalendarView.h */,
+				F7790166D9415872ACE5ADE8F518049A /* CLWeeklyCalendarView.m */,
+				3BB4C1317E8609E4B3AA3F59D1A2A659 /* DailyCalendarView.h */,
+				04202037B6305F5B4DCAFE268F23C8BE /* DailyCalendarView.m */,
+				6985A9451214613110F91B95E253A1EE /* DayTitleLabel.h */,
+				2470D5D2778DF9A75E2B640F85C3574B /* DayTitleLabel.m */,
+				CCBE80865ED6AFFA80EC7C3F19F2C2BA /* NSDate+CL.h */,
+				B2709F2360A681845898FA3DC0DF9E2E /* NSDate+CL.m */,
+				D774B147F1375923C84335D1BCC2E23E /* NSDictionary+CL.h */,
+				60174F9A3B1111B34756652602755FD6 /* NSDictionary+CL.m */,
+				DE2B2CC7C59CFE8AB615AC8F2E827AAE /* UIColor+CL.h */,
+				1ED1043C2F7E05ED4485EA2C544B3D8B /* UIColor+CL.m */,
+				7C6D2003A5BFBAB10A8F0A3C8829B59E /* Support Files */,
 			);
-			name = Products;
+			path = CLWeeklyCalendarView;
+			sourceTree = "<group>";
+		};
+		4347CB6096E64FCC0AA5172BFB78E779 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20D17EAE80050F6C568C1C71EAE43634 /* CLWeeklyCalendarView */,
+				5E62901478AC433924852DBBABA1C3E1 /* LNNotificationsUI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E62901478AC433924852DBBABA1C3E1 /* LNNotificationsUI */ = {
+			isa = PBXGroup;
+			children = (
+				0FBF49756B77B29701D894D86654319A /* LNNotification.h */,
+				FFDA371C64575B5E04CA3AD5C31F0037 /* LNNotification.m */,
+				AF5668A362EBB62915C33878DA84EE3B /* LNNotificationAppSettings.h */,
+				8C41D55EDD5B978702141A1D77F82E0E /* LNNotificationAppSettings.m */,
+				668BA1B172E0124399ED99043C6E929D /* LNNotificationAppSettings_Private.h */,
+				15AD79BDDBA2CD8C9C2DE554FD8CD414 /* LNNotificationBannerView.h */,
+				DA8A384F15F40DA44AA68902E6046A32 /* LNNotificationBannerView.m */,
+				26581669D3C53B55546DD8A5052EB395 /* LNNotificationBannerWindow.h */,
+				A93418641F211557320A74D9A79193B0 /* LNNotificationBannerWindow.m */,
+				04DDC10C39B5F27CA6DEA58EB1367E64 /* LNNotificationCenter.h */,
+				CDF67DE1BD5578E9686700D470647B76 /* LNNotificationCenter.m */,
+				3CBA6C7CB30BC3515C49F603BAA4947C /* LNNotificationsAppSettingsController.h */,
+				A0BC5C646DD4093F46E06904D44E57B8 /* LNNotificationsAppSettingsController.m */,
+				EC114DAE46FBF7A0A8162E2766BC740E /* LNNotificationSettingsController.h */,
+				DFFD12BB3F9BBE9565FC0182CFF869C8 /* LNNotificationSettingsController.m */,
+				ECB3A67A1B71691C5F111CF75C9395DE /* LNNotificationsUI.h */,
+				63295A6B642B5E12E2E3DE3825E85FB1 /* LNNotificationsUI_iOS7.1.h */,
+				6F3E4EFD2343E33EFCB3996276AF4B41 /* Support Files */,
+			);
+			path = LNNotificationsUI;
+			sourceTree = "<group>";
+		};
+		6F3E4EFD2343E33EFCB3996276AF4B41 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA8E90417DF08B10034A28C25F705EDA /* Info.plist */,
+				C3502EC433E587772918B743FAB9A5A5 /* LNNotificationsUI.modulemap */,
+				27497B109C38F08BBE0B01ACA5544569 /* LNNotificationsUI.xcconfig */,
+				9C093C29D94A9915A7A94446DAC71B99 /* LNNotificationsUI-dummy.m */,
+				4B2EB8894FA821F8227053F53C2B7608 /* LNNotificationsUI-prefix.pch */,
+				1836757B7777F125B65477D6ECE7D399 /* LNNotificationsUI-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LNNotificationsUI";
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -119,15 +237,15 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		7846BAC821E999E547494293567E20E0 /* Support Files */ = {
+		7C6D2003A5BFBAB10A8F0A3C8829B59E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AE108B5D93C2C2F32B50F84F536C29A4 /* CLWeeklyCalendarView.modulemap */,
-				16AA84717C48094BAC9B246E534CD514 /* CLWeeklyCalendarView.xcconfig */,
-				230D5BFFC44B134A81D5D93489C2ABA3 /* CLWeeklyCalendarView-dummy.m */,
-				51DD234229FA8BDB0D44DF41A006D655 /* CLWeeklyCalendarView-prefix.pch */,
-				11B89AA7DA53C4AC20664A63C6B9CFC4 /* CLWeeklyCalendarView-umbrella.h */,
-				9034D88F2F14AF79D81C87033C1CF7C1 /* Info.plist */,
+				1109CA9BAFCBBAE5C5E293B9DAC20AAE /* CLWeeklyCalendarView.modulemap */,
+				7B0E70E07590688362CC9AC833EF03A6 /* CLWeeklyCalendarView.xcconfig */,
+				EAB3D9E706D2DA7929A1A547C798BFA6 /* CLWeeklyCalendarView-dummy.m */,
+				3AB32F88AD04BAA72DFB19DAD2F11095 /* CLWeeklyCalendarView-prefix.pch */,
+				6F633563C2FA045FBB148873D4F9445E /* CLWeeklyCalendarView-umbrella.h */,
+				0F696A7F8818028B8180CB2DCF32BC9F /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CLWeeklyCalendarView";
@@ -138,30 +256,10 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BF22918F2946C663723F317E0859A198 /* Pods */,
-				52204D2E6E8606445AFB5D8CA09E34E8 /* Products */,
+				4347CB6096E64FCC0AA5172BFB78E779 /* Pods */,
+				C1C0F60EF936DA92D0407446239C3419 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9570FE11EC817CD79157E07B35687175 /* CLWeeklyCalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				BE1581EEE0AF02CCF881ADA30B0A901C /* CLWeeklyCalendarView.h */,
-				3259836E1D4CE5D77ACA7FE70A1246D9 /* CLWeeklyCalendarView.m */,
-				1383D153AF640C6D698E8BE97AD23F28 /* DailyCalendarView.h */,
-				BFE06FB5492254CA2CA098BF4794BE8A /* DailyCalendarView.m */,
-				C2E3A413C731BCFB07FDE1C4CCCCE92D /* DayTitleLabel.h */,
-				517296EA5A977170183D11A404722E9F /* DayTitleLabel.m */,
-				816156AAF676C8D5AFCDD970EFAB9C37 /* NSDate+CL.h */,
-				CDBE540E6C46AC7E54F746AFCE8D5F3E /* NSDate+CL.m */,
-				F9215578C4491A85F07CE98C677A4D73 /* NSDictionary+CL.h */,
-				71CD50BED11404EB38AD515418F1E44D /* NSDictionary+CL.m */,
-				0BC99DF5A36F770EF09AE3D79AF0D244 /* UIColor+CL.h */,
-				67BCB8E39ABF8214B9D1044C2B905CD5 /* UIColor+CL.m */,
-				7846BAC821E999E547494293567E20E0 /* Support Files */,
-			);
-			path = CLWeeklyCalendarView;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -180,20 +278,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF22918F2946C663723F317E0859A198 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9570FE11EC817CD79157E07B35687175 /* CLWeeklyCalendarView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C1C0F60EF936DA92D0407446239C3419 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				025EAB78B1E90F06F6EBEE47A41DA7C0 /* CLWeeklyCalendarView.framework */,
+				E8B16A94A54755C0F663A016B1034A20 /* LNNotificationsUI.framework */,
+				FC928E8C5116651902F3EB266F98C951 /* Pods.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,33 +313,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D4BFAD11FE461091D7688435AB756E4 /* Headers */ = {
+		F24EF293BFAE6C890496D3914C816F6A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A789E80ACA0EED17AB4C299FCD679BA5 /* Pods-umbrella.h in Headers */,
+				B981D524908CEAA46D4BD6A3B7F52108 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A634A37116EEDAB1083844CA05F229 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2437B3739FE6F64142806040CE95B6A2 /* LNNotification.h in Headers */,
+				F2EA0C93154A507E302909B1B8521D92 /* LNNotificationAppSettings.h in Headers */,
+				91C928ABFC9CFAF458D58D7988F814EC /* LNNotificationAppSettings_Private.h in Headers */,
+				65B73E294E54C65F2D191FAAD45F6137 /* LNNotificationBannerView.h in Headers */,
+				92B450155FD3482E9AE26708603FD7FE /* LNNotificationBannerWindow.h in Headers */,
+				737006AF306AD725D90868D8E078ECC4 /* LNNotificationCenter.h in Headers */,
+				7B418CEDA111F280F78616BDD9D51EAA /* LNNotificationsAppSettingsController.h in Headers */,
+				9CC4B16E0A2FEB2B871791A58A02367A /* LNNotificationSettingsController.h in Headers */,
+				FDAE7B58B98637AAD0A551A4A7CBAD7F /* LNNotificationsUI-umbrella.h in Headers */,
+				A83B6FED013C03016F6D46A1F60E44E6 /* LNNotificationsUI.h in Headers */,
+				C49967EF6388CDE35F66225D118BEB31 /* LNNotificationsUI_iOS7.1.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		27AD1F43BBF82ED74D611F1CFACFC90A /* Pods */ = {
+		5B3DF7355A2D3B4D42481CA34AB6E2AE /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD33B20A21D24E270B6EC3F5AB678072 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 617604AC376545BA7936C0C0F3DFD83B /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				B22ACF9F43A84C7CDC6AD7B4B8775980 /* Sources */,
-				BDBD1A03D39F6823C64F20F2FFD28573 /* Frameworks */,
-				7D4BFAD11FE461091D7688435AB756E4 /* Headers */,
+				275D7E388E1C74AD118811C8ABEA4C35 /* Sources */,
+				C93D6B16573A09D9F79066DC8BDE2024 /* Frameworks */,
+				F24EF293BFAE6C890496D3914C816F6A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A486284ABD1334F0F81B6FA373C46715 /* PBXTargetDependency */,
+				937641364E7633CCBF46FB7F778DBE10 /* PBXTargetDependency */,
+				06AE1E0484984E76C30755F341C05A78 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 51E31A79F37C042107C1632E091B4FB7 /* Pods.framework */;
+			productReference = FC928E8C5116651902F3EB266F98C951 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9E91A19FD9971EA432EAAE0A204DA503 /* LNNotificationsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B536055DB30707454055FED01AE49E8 /* Build configuration list for PBXNativeTarget "LNNotificationsUI" */;
+			buildPhases = (
+				2E14E371BB2BECF3914E88651FA9D73C /* Sources */,
+				9A0B2F97F93B9FD4BD406A2B80A66C92 /* Frameworks */,
+				F7A634A37116EEDAB1083844CA05F229 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LNNotificationsUI;
+			productName = LNNotificationsUI;
+			productReference = E8B16A94A54755C0F663A016B1034A20 /* LNNotificationsUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F0DEC7FA6A26BF80914FF32ACB7FCF9C /* CLWeeklyCalendarView */ = {
@@ -256,7 +392,7 @@
 			);
 			name = CLWeeklyCalendarView;
 			productName = CLWeeklyCalendarView;
-			productReference = 1CB38C7951ED5936869A9D1F44D9C286 /* CLWeeklyCalendarView.framework */;
+			productReference = 025EAB78B1E90F06F6EBEE47A41DA7C0 /* CLWeeklyCalendarView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -276,17 +412,41 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 52204D2E6E8606445AFB5D8CA09E34E8 /* Products */;
+			productRefGroup = C1C0F60EF936DA92D0407446239C3419 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F0DEC7FA6A26BF80914FF32ACB7FCF9C /* CLWeeklyCalendarView */,
-				27AD1F43BBF82ED74D611F1CFACFC90A /* Pods */,
+				9E91A19FD9971EA432EAAE0A204DA503 /* LNNotificationsUI */,
+				5B3DF7355A2D3B4D42481CA34AB6E2AE /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		275D7E388E1C74AD118811C8ABEA4C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52976BC950A1DCBF14B970EAF826B9C /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14E371BB2BECF3914E88651FA9D73C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89F11D6D4244351B0B8FC598B5A7ABA /* LNNotification.m in Sources */,
+				85D3AF992D50D819641A12C3363FBB60 /* LNNotificationAppSettings.m in Sources */,
+				B84B4E5C44CA16EE18BF3C75B76E21A3 /* LNNotificationBannerView.m in Sources */,
+				DAC1753696D8086D017E10EEF84ABA5A /* LNNotificationBannerWindow.m in Sources */,
+				3CA443393CD959332979F7CC1331CC44 /* LNNotificationCenter.m in Sources */,
+				B4D1375C3EFEC278099E24773AAB7A13 /* LNNotificationsAppSettingsController.m in Sources */,
+				B4A3AE8701D0E33523ECE3D77B8F4574 /* LNNotificationSettingsController.m in Sources */,
+				B576391D358F1292B8868D2A0B560BA6 /* LNNotificationsUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C92EEC6D11BD6321CDAF75C1B58221F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,26 +461,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B22ACF9F43A84C7CDC6AD7B4B8775980 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C054AB52D1A022B2F8481FE4DC182671 /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A486284ABD1334F0F81B6FA373C46715 /* PBXTargetDependency */ = {
+		06AE1E0484984E76C30755F341C05A78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LNNotificationsUI;
+			target = 9E91A19FD9971EA432EAAE0A204DA503 /* LNNotificationsUI */;
+			targetProxy = 39596CDFDF5C9615580ADA966522892A /* PBXContainerItemProxy */;
+		};
+		937641364E7633CCBF46FB7F778DBE10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLWeeklyCalendarView;
 			target = F0DEC7FA6A26BF80914FF32ACB7FCF9C /* CLWeeklyCalendarView */;
-			targetProxy = 7351502DC740D5FA622F000E90B1A67A /* PBXContainerItemProxy */;
+			targetProxy = 4FCE8A22F30E96298F32E958EDDB3D61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0902C3D04A5A804937F03DE0F0843DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3480AC2717C446E050559372C6CE0DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27497B109C38F08BBE0B01ACA5544569 /* LNNotificationsUI.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LNNotificationsUI/LNNotificationsUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LNNotificationsUI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LNNotificationsUI/LNNotificationsUI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LNNotificationsUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,7 +611,7 @@
 		};
 		8D0014F2E5A360F9ACBADDDB0D5EA186 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16AA84717C48094BAC9B246E534CD514 /* CLWeeklyCalendarView.xcconfig */;
+			baseConfigurationReference = 7B0E70E07590688362CC9AC833EF03A6 /* CLWeeklyCalendarView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -421,7 +636,34 @@
 			};
 			name = Release;
 		};
-		9832CA02D5BF7F2B11A3F259857FD4D9 /* Release */ = {
+		AC43DE5124DB02E6E10CFE1B3EF8FCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B0E70E07590688362CC9AC833EF03A6 /* CLWeeklyCalendarView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CLWeeklyCalendarView/CLWeeklyCalendarView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLWeeklyCalendarView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLWeeklyCalendarView/CLWeeklyCalendarView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CLWeeklyCalendarView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E481508C2761E1BD0C92AA628AF22217 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
 			buildSettings = {
@@ -451,9 +693,9 @@
 			};
 			name = Release;
 		};
-		AC43DE5124DB02E6E10CFE1B3EF8FCE1 /* Debug */ = {
+		E71DDE762A2AB6FB2E1B18EF945A2BA7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16AA84717C48094BAC9B246E534CD514 /* CLWeeklyCalendarView.xcconfig */;
+			baseConfigurationReference = 27497B109C38F08BBE0B01ACA5544569 /* LNNotificationsUI.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -462,51 +704,21 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CLWeeklyCalendarView/CLWeeklyCalendarView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLWeeklyCalendarView/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LNNotificationsUI/LNNotificationsUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LNNotificationsUI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLWeeklyCalendarView/CLWeeklyCalendarView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CLWeeklyCalendarView;
+				MODULEMAP_FILE = "Target Support Files/LNNotificationsUI/LNNotificationsUI.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LNNotificationsUI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		C17067DBC9521C45DABBDACD50A0F43F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -520,11 +732,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD33B20A21D24E270B6EC3F5AB678072 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		617604AC376545BA7936C0C0F3DFD83B /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C17067DBC9521C45DABBDACD50A0F43F /* Debug */,
-				9832CA02D5BF7F2B11A3F259857FD4D9 /* Release */,
+				0902C3D04A5A804937F03DE0F0843DE6 /* Debug */,
+				E481508C2761E1BD0C92AA628AF22217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B536055DB30707454055FED01AE49E8 /* Build configuration list for PBXNativeTarget "LNNotificationsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3480AC2717C446E050559372C6CE0DEC /* Debug */,
+				E71DDE762A2AB6FB2E1B18EF945A2BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '77ED84EE8AC14B163146B90D'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = 'EE175B59C1C2C37F569E0B09'
+               BlueprintName = 'LNNotificationsUI'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods.framework'>
+               BuildableName = 'LNNotificationsUI.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -353,7 +353,7 @@
     <resources>
         <image name="Bookmark" width="50" height="50"/>
         <image name="Bookmarks" width="64" height="64"/>
-        <image name="PolyTech" width="416" height="416"/>
+        <image name="PolyTech" width="130" height="130"/>
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>

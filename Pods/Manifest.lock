@@ -1,10 +1,13 @@
 PODS:
   - CLWeeklyCalendarView (0.0.2)
+  - LNNotificationsUI (0.0.1)
 
 DEPENDENCIES:
   - CLWeeklyCalendarView (~> 0.0.2)
+  - LNNotificationsUI (~> 0.0.1)
 
 SPEC CHECKSUMS:
   CLWeeklyCalendarView: b68178cf66fcd8c828440aa9bfc31ba6ed20db9d
+  LNNotificationsUI: 19554d28a5c3bb89a196ab7a5b0d5c9d95c28b96
 
 COCOAPODS: 0.39.0

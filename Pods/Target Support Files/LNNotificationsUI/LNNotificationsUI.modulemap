@@ -1,0 +1,6 @@
+framework module LNNotificationsUI {
+  umbrella header "LNNotificationsUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

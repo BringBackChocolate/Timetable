@@ -19,7 +19,7 @@ class FacultiesViewController : UIViewController , UITableViewDataSource , UITab
         tableView.delegate=self
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"FAC")
         self.navigationItem.title="СПБПУ"
-        TTDB.loadBookmarks()
+        TTDB.loadBookmarks()        
         faculties=TTDB.loadLocalFaculties({
             facs in
             self.faculties=facs

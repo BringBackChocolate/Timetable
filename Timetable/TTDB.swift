@@ -7,7 +7,11 @@
 //
 
 import Foundation
-
+protocol BookmarksListener
+{
+    func onAddBookmark(bookmark:Group);
+    func onRemoveBookmark(bookmark:Group)
+}
 class TTDB
 {
     static let facultiesURL=NSURL(string:"http://ruz2.spbstu.ru/api/v1/ruz/faculties/")!
@@ -253,13 +257,14 @@ class TTDB
             }
         }
     }
+    static var bookmarksListener:BookmarksListener?
     static func loadBookmarks()
     {
         if let json=jsonFromFile("bookmarks.json")
         {
             for (_,s) in json
             {
-                addBookmark(Group(json:s))
+                addBookmark(Group(json:s),silent:true)
             }
         }
         else
@@ -286,21 +291,23 @@ class TTDB
         }
         save(newStr, toFile: "bookmarks.json")
     }
-    static func addBookmark(bookmark:Group)
+    static func addBookmark(bookmark:Group,silent:Bool=false)
     {
         if(!bookmarks.contains(bookmark))
         {
             bookmarks.append(bookmark)
         }
+        if !silent{bookmarksListener?.onAddBookmark(bookmark)}
         saveBookmarks()
     }
-    static func removeBookmark(bookmark:Group)
+    static func removeBookmark(bookmark:Group,silent:Bool=false)
     {
         if let idx=bookmarks.indexOf(bookmark)
         {
             bookmarks.removeAtIndex(idx)
         }
         saveBookmarks()
+        if !silent{bookmarksListener?.onRemoveBookmark(bookmark)}
     }
     static func groupIsFav(group:Group)->Bool
     {
