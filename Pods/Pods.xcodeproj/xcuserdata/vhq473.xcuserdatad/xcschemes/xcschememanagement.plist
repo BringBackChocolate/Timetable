@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LNNotificationsUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27AD1F43BBF82ED74D611F1CFACFC90A</key>
+		<key>5B3DF7355A2D3B4D42481CA34AB6E2AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E91A19FD9971EA432EAAE0A204DA503</key>
 		<dict>
 			<key>primary</key>
 			<true/>

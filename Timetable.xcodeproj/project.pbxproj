@@ -24,6 +24,7 @@
 		410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F11C78CF9A00E49CB9 /* Lesson.swift */; };
 		410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F31C78D58100E49CB9 /* Extensions.swift */; };
 		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
+		4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB931C8725330094F9F3 /* LessonsNotifier.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
@@ -65,6 +66,7 @@
 		410BE3F11C78CF9A00E49CB9 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		410BE3F31C78D58100E49CB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		410BE3F51C78D7CA00E49CB9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4126BB931C8725330094F9F3 /* LessonsNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsNotifier.swift; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		410BE3C81C788E2500E49CB9 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				4126BB921C8725130094F9F3 /* Notifications */,
 				41B850D51C85E2E4008A63DA /* Libraries */,
 				419764841C7DCDB5006A2837 /* Search */,
 				410BE3E21C78A70700E49CB9 /* DB */,
@@ -164,6 +167,14 @@
 				410BE3F31C78D58100E49CB9 /* Extensions.swift */,
 			);
 			name = DB;
+			sourceTree = "<group>";
+		};
+		4126BB921C8725130094F9F3 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				4126BB931C8725330094F9F3 /* LessonsNotifier.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		419764841C7DCDB5006A2837 /* Search */ = {
@@ -387,6 +398,7 @@
 				41B851021C85E2E4008A63DA /* UIView+OBDropZone.m in Sources */,
 				41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */,
 				41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */,
+				4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */,
 				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
 				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,
 				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,

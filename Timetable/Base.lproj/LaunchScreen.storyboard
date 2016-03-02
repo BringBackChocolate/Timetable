@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PolyTech" width="416" height="416"/>
+        <image name="PolyTech" width="130" height="130"/>
     </resources>
 </document>
