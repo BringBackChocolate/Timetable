@@ -16,27 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UISplitViewControllerDeleg
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        if let splitViewController=self.window?.rootViewController as?UISplitViewController
-        {
-            if splitViewController.collapsed
-            {
-                let viewControllers = splitViewController.viewControllers
-                for controller in viewControllers
-                {
-                    // PrimaryNavigationController is the navigation controller I use
-                    // as the split views master view, which is also set as its delegate
-                    // but it could be any UINavigationController that is the
-                    // primary controller of the split view
-                    if let c=controller as?UINavigationController
-                    {
-                        if !(c is CalendarNavigationController)
-                        {
-                            c.popViewControllerAnimated(false)
-                        }
-                    }
-                }
-            }
-        }
+        let splitViewController:UISplitViewController? = self.window?.rootViewController as? UISplitViewController
+        splitViewController?.delegate = self
+
         dispatch_async(dispatch_get_global_queue(0,0),{
             TTDB.refresh()
         })
@@ -70,5 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UISplitViewControllerDeleg
     {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        if let calendarViewController = (secondaryViewController as? UINavigationController)?.topViewController as? CalendarViewController
+        {
+            if(calendarViewController.group == nil)
+            {
+                splitViewController.preferredDisplayMode = .AllVisible
+                return true
+            }
+        }
+        splitViewController.preferredDisplayMode = .Automatic
+        return false
+    }
 }
-

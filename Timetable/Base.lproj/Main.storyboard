@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXJ-VO-6MQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXJ-VO-6MQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -189,13 +189,11 @@
             <objects>
                 <splitViewController id="vXJ-VO-6MQ" sceneMemberID="viewController">
                     <connections>
-                        <outlet property="delegate" destination="Iij-Vb-D2v" id="cpN-qy-xfK"/>
                         <segue destination="rqt-ZQ-gEV" kind="relationship" relationship="masterViewController" id="xuQ-nx-HbL"/>
                         <segue destination="hCu-y9-wbH" kind="relationship" relationship="detailViewController" id="Y7b-OD-IRR"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoj-rS-ZpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Iij-Vb-D2v" customClass="SplitViewDelegate" customModule="Timetable" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1618" y="-283"/>
         </scene>

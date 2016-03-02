@@ -35,9 +35,14 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
                 }
             })
         })
-        if let g=group{TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)}
+        if let g=group
+        {
+            TTDB.cacheGroup(g.id, date:NSDate(),weeks:4)
+            self.splitViewController?.preferredDisplayMode = .Automatic
+        }
         else
         {
+            self.splitViewController?.preferredDisplayMode = .AllVisible
             eventsView.removeFromSuperview()
             weekView.removeFromSuperview()
             //view.backgroundColor=UIColor.polytechColor()
