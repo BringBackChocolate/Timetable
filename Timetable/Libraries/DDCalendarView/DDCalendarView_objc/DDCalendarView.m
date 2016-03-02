@@ -209,7 +209,9 @@
     }
     [self.centerCal scrollTimeToVisible:date animated:animated];
 }
-
+-(void) scrollTimeToVisible:(NSDate* _Nonnull)date animated:(BOOL)animated {
+    [self.centerCal scrollTimeToVisible:date animated:animated];
+}
 //paging view
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)sender {
     if(sender == self.pagingView) {

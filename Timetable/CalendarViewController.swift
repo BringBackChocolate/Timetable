@@ -152,7 +152,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         }
         if(events.count>0)
         {dispatch_async(dispatch_get_main_queue(),{
-            var dateToScroll=events[0].dateBegin.dateByAddingTimeInterval(-1*3600)
+            var dateToScroll=events[0].dateBegin
             if dateToScroll.startOfDay == NSDate().startOfDay
             {
                 dateToScroll=NSDate()
@@ -160,7 +160,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
             if view.date.startOfDay != dateToScroll.startOfDay{
                 view.date=dateToScroll}
             //print("scrollDateToVisible(\(dateToScroll))")
-            //view.scrollDateToVisible(dateToScroll, animated:true)
+            view.scrollTimeToVisible(dateToScroll, animated:true)
         })}
         return events
     }

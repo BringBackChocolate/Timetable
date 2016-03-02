@@ -153,12 +153,15 @@
     NSInteger mins = comps.minute;
     
     hours = MAX(0, hours-1);
-    
-    NSDate *tempDate = [NSDate todayDateWithHour:hours min:mins];
-    CGPoint offset = [self pointForDate:tempDate];
-    CGRect rect = CGRectMake(0, offset.y, 10, 10);
-    rect.size = self.bounds.size;
-    [self scrollRectToVisible:rect animated:animated];
+    CGFloat y=(hours*60+mins)*PIXELS_PER_MIN;
+    CGPoint offset=CGPointMake(0, y);
+    //NSDate *tempDate = [NSDate todayDateWithHour:hours min:mins];
+    //CGPoint offset = [self pointForDate:tempDate];
+    //CGRect rect = CGRectMake(0, offset.y, 10, 10);
+    //rect.size = self.bounds.size;
+    //[self scrollRectToVisible:rect animated:animated];
+    //offset.y=-offset.y;    
+    [self setContentOffset:offset animated:animated];
 }
 
 - (void)setShowsTimeMarker:(BOOL)showsTimeMarker {

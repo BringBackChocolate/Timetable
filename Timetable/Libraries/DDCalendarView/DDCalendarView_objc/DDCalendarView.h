@@ -25,6 +25,7 @@ IB_DESIGNABLE
 
 - (void)reloadData;
 - (void)scrollDateToVisible:(NSDate* _Nonnull)date animated:(BOOL)animated;
+-(void) scrollTimeToVisible:(NSDate* _Nonnull)date animated:(BOOL)animated;
 
 @end
 
