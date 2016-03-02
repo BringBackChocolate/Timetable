@@ -26,6 +26,7 @@
 		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
 		4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB931C8725330094F9F3 /* LessonsNotifier.swift */; };
 		4126BB971C87393C0094F9F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB961C87393C0094F9F3 /* Settings.swift */; };
+		4126BB991C873BA30094F9F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB981C873BA30094F9F3 /* SettingsViewController.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
@@ -69,6 +70,7 @@
 		410BE3F51C78D7CA00E49CB9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4126BB931C8725330094F9F3 /* LessonsNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsNotifier.swift; sourceTree = "<group>"; };
 		4126BB961C87393C0094F9F3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4126BB981C873BA30094F9F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4126BB961C87393C0094F9F3 /* Settings.swift */,
+				4126BB981C873BA30094F9F3 /* SettingsViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
 				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,
 				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,
+				4126BB991C873BA30094F9F3 /* SettingsViewController.swift in Sources */,
 				41B850FC1C85E2E4008A63DA /* FFViewWithHourLines.m in Sources */,
 				4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */,
 				41B850FA1C85E2E4008A63DA /* DDCalendarView.m in Sources */,
