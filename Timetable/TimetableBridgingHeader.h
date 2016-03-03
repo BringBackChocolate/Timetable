@@ -14,4 +14,5 @@
 #import "DDCalendarEventView.h"
 //#import "LNNotificationsUI.h"
 #import "LNNotificationsUI_iOS7.1.h"
+#import "CBZSplashView.h"
 #endif /* TimetableBridgingHeader_h */

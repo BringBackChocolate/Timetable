@@ -306,7 +306,7 @@
         <!--Split View Controller-->
         <scene sceneID="nWa-XM-VoM">
             <objects>
-                <splitViewController id="vXJ-VO-6MQ" sceneMemberID="viewController">
+                <splitViewController id="vXJ-VO-6MQ" customClass="SplitViewController" customModule="Timetable" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="rqt-ZQ-gEV" kind="relationship" relationship="masterViewController" id="xuQ-nx-HbL"/>
                         <segue destination="hCu-y9-wbH" kind="relationship" relationship="detailViewController" id="Y7b-OD-IRR"/>
@@ -475,11 +475,11 @@
     <resources>
         <image name="Bookmark" width="50" height="50"/>
         <image name="Bookmarks" width="64" height="64"/>
-        <image name="PolyTech" width="130" height="130"/>
+        <image name="PolyTech" width="390" height="390"/>
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TAu-fp-6Op"/>
-        <segue reference="Y7P-RM-hAS"/>
+        <segue reference="Y7b-OD-IRR"/>
+        <segue reference="MpG-bu-54s"/>
     </inferredMetricsTieBreakers>
 </document>

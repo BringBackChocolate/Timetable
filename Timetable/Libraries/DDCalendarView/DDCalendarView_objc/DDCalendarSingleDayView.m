@@ -151,7 +151,6 @@
     NSDateComponents *comps = date.currentCalendarDateComponents;
     NSInteger hours = comps.hour;
     NSInteger mins = comps.minute;
-    
     hours = MAX(0, hours-1);
     CGFloat y=(hours*60+mins)*PIXELS_PER_MIN;
     CGPoint offset=CGPointMake(0, y);

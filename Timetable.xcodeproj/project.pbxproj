@@ -23,10 +23,15 @@
 		410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3EF1C78CF4E00E49CB9 /* Day.swift */; };
 		410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F11C78CF9A00E49CB9 /* Lesson.swift */; };
 		410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F31C78D58100E49CB9 /* Extensions.swift */; };
-		410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F51C78D7CA00E49CB9 /* Preferences.swift */; };
 		4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB931C8725330094F9F3 /* LessonsNotifier.swift */; };
 		4126BB971C87393C0094F9F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB961C87393C0094F9F3 /* Settings.swift */; };
 		4126BB991C873BA30094F9F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB981C873BA30094F9F3 /* SettingsViewController.swift */; };
+		417227AC1C88644400BAB98C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417227AB1C88644400BAB98C /* SplitViewController.swift */; };
+		417227B81C886AC000BAB98C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 417227AE1C886AC000BAB98C /* LICENSE */; };
+		417227B91C886AC000BAB98C /* CBZRasterSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417227B21C886AC000BAB98C /* CBZRasterSplashView.m */; };
+		417227BA1C886AC000BAB98C /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417227B41C886AC000BAB98C /* CBZSplashView.m */; };
+		417227BB1C886AC000BAB98C /* CBZVectorSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417227B61C886AC000BAB98C /* CBZVectorSplashView.m */; };
+		417227BC1C886AC000BAB98C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 417227B71C886AC000BAB98C /* README.md */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
@@ -67,10 +72,18 @@
 		410BE3EF1C78CF4E00E49CB9 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		410BE3F11C78CF9A00E49CB9 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		410BE3F31C78D58100E49CB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		410BE3F51C78D7CA00E49CB9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4126BB931C8725330094F9F3 /* LessonsNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsNotifier.swift; sourceTree = "<group>"; };
 		4126BB961C87393C0094F9F3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4126BB981C873BA30094F9F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		417227AB1C88644400BAB98C /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewController.swift; path = ../SplitViewController.swift; sourceTree = "<group>"; };
+		417227AE1C886AC000BAB98C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		417227B11C886AC000BAB98C /* CBZRasterSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBZRasterSplashView.h; sourceTree = "<group>"; };
+		417227B21C886AC000BAB98C /* CBZRasterSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBZRasterSplashView.m; sourceTree = "<group>"; };
+		417227B31C886AC000BAB98C /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBZSplashView.h; sourceTree = "<group>"; };
+		417227B41C886AC000BAB98C /* CBZSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBZSplashView.m; sourceTree = "<group>"; };
+		417227B51C886AC000BAB98C /* CBZVectorSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBZVectorSplashView.h; sourceTree = "<group>"; };
+		417227B61C886AC000BAB98C /* CBZVectorSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBZVectorSplashView.m; sourceTree = "<group>"; };
+		417227B71C886AC000BAB98C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
@@ -145,15 +158,15 @@
 				419764841C7DCDB5006A2837 /* Search */,
 				410BE3E21C78A70700E49CB9 /* DB */,
 				410BE3C91C788E2600E49CB9 /* AppDelegate.swift */,
-				DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */,
-				410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */,
+				417227A91C8863C300BAB98C /* Bookmarks */,
+				417227AA1C8863C900BAB98C /* Calendar */,
 				410BE3CD1C788E2600E49CB9 /* Main.storyboard */,
 				410BE3D01C788E2600E49CB9 /* Assets.xcassets */,
 				410BE3D21C788E2600E49CB9 /* LaunchScreen.storyboard */,
 				410BE3D51C788E2600E49CB9 /* Info.plist */,
 				410BE3DB1C788FD900E49CB9 /* TimetableBridgingHeader.h */,
+				417227AB1C88644400BAB98C /* SplitViewController.swift */,
 				410BE3DC1C78965C00E49CB9 /* Globals.swift */,
-				410BE3F51C78D7CA00E49CB9 /* Preferences.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
@@ -191,6 +204,53 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		417227A91C8863C300BAB98C /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				DD08277D1C7F658100CE1F0B /* BookmarksViewController.swift */,
+			);
+			name = Bookmarks;
+			sourceTree = "<group>";
+		};
+		417227AA1C8863C900BAB98C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				410BE3CB1C788E2600E49CB9 /* CalendarViewController.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		417227AD1C886AC000BAB98C /* CBZSplashView */ = {
+			isa = PBXGroup;
+			children = (
+				417227AE1C886AC000BAB98C /* LICENSE */,
+				417227AF1C886AC000BAB98C /* Pod */,
+				417227B71C886AC000BAB98C /* README.md */,
+			);
+			path = CBZSplashView;
+			sourceTree = "<group>";
+		};
+		417227AF1C886AC000BAB98C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				417227B01C886AC000BAB98C /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		417227B01C886AC000BAB98C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				417227B11C886AC000BAB98C /* CBZRasterSplashView.h */,
+				417227B21C886AC000BAB98C /* CBZRasterSplashView.m */,
+				417227B31C886AC000BAB98C /* CBZSplashView.h */,
+				417227B41C886AC000BAB98C /* CBZSplashView.m */,
+				417227B51C886AC000BAB98C /* CBZVectorSplashView.h */,
+				417227B61C886AC000BAB98C /* CBZVectorSplashView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		419764841C7DCDB5006A2837 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +263,7 @@
 		41B850D51C85E2E4008A63DA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				417227AD1C886AC000BAB98C /* CBZSplashView */,
 				41B850D61C85E2E4008A63DA /* DDCalendarView */,
 			);
 			path = Libraries;
@@ -351,6 +412,7 @@
 				410BE3D11C788E2600E49CB9 /* Assets.xcassets in Resources */,
 				41B851031C85E2E4008A63DA /* LICENSE in Resources */,
 				410BE3CF1C788E2600E49CB9 /* Main.storyboard in Resources */,
+				417227B81C886AC000BAB98C /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B851021C85E2E4008A63DA /* UIView+OBDropZone.m in Sources */,
+				417227B91C886AC000BAB98C /* CBZRasterSplashView.m in Sources */,
 				41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */,
 				41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */,
 				4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */,
 				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
+				417227BC1C886AC000BAB98C /* README.md in Sources */,
 				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,
 				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,
 				4126BB991C873BA30094F9F3 /* SettingsViewController.swift in Sources */,
@@ -423,6 +487,7 @@
 				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
 				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
 				41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */,
+				417227BA1C886AC000BAB98C /* CBZSplashView.m in Sources */,
 				41B850FE1C85E2E4008A63DA /* NSDate+DDCalendar.m in Sources */,
 				41B851041C85E2E4008A63DA /* README.md in Sources */,
 				410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */,
@@ -433,14 +498,15 @@
 				41F273A01C7DE05A0057947F /* FacultiesViewController.swift in Sources */,
 				4126BB971C87393C0094F9F3 /* Settings.swift in Sources */,
 				410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */,
-				410BE3F61C78D7CA00E49CB9 /* Preferences.swift in Sources */,
 				41B851001C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m in Sources */,
 				410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */,
 				410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */,
 				410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */,
 				41B850FD1C85E2E4008A63DA /* UILabel+FFCustomMethods.m in Sources */,
+				417227BB1C886AC000BAB98C /* CBZVectorSplashView.m in Sources */,
 				410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */,
 				410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */,
+				417227AC1C88644400BAB98C /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
