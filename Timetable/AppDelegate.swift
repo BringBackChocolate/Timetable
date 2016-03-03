@@ -59,9 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UISplitViewControllerDeleg
         {
             if NSDate().dateByAddingTimeInterval(-600).compare(date) == .OrderedAscending
             {
-                LessonsNotifier.instance.presentNotification(notification)
+                Notifier.i.presentNotification(notification)
             }
-        }else{LessonsNotifier.instance.presentNotification(notification)}
+        }else{Notifier.i.presentNotification(notification)}
     }
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {

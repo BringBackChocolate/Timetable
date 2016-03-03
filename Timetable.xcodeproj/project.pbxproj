@@ -32,6 +32,7 @@
 		417227BA1C886AC000BAB98C /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417227B41C886AC000BAB98C /* CBZSplashView.m */; };
 		417227BB1C886AC000BAB98C /* CBZVectorSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417227B61C886AC000BAB98C /* CBZVectorSplashView.m */; };
 		417227BC1C886AC000BAB98C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 417227B71C886AC000BAB98C /* README.md */; };
+		417227C01C8873F100BAB98C /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417227BF1C8873F100BAB98C /* Notifier.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
@@ -84,6 +85,7 @@
 		417227B51C886AC000BAB98C /* CBZVectorSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBZVectorSplashView.h; sourceTree = "<group>"; };
 		417227B61C886AC000BAB98C /* CBZVectorSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBZVectorSplashView.m; sourceTree = "<group>"; };
 		417227B71C886AC000BAB98C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		417227BF1C8873F100BAB98C /* Notifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				4126BB931C8725330094F9F3 /* LessonsNotifier.swift */,
+				417227BF1C8873F100BAB98C /* Notifier.swift */,
 			);
 			name = Notifications;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */,
 				41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */,
 				4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */,
+				417227C01C8873F100BAB98C /* Notifier.swift in Sources */,
 				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
 				417227BC1C886AC000BAB98C /* README.md in Sources */,
 				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,

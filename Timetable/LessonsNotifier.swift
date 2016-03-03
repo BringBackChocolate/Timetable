@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
+class LessonsNotifier:BookmarksListener
 {
     static let instance=LessonsNotifier()
     var onceToken:dispatch_once_t=0;
@@ -20,7 +20,7 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
                 LessonsNotifier.instance.sheduldeNotfications(sh)
                 if(Settings.i.showNotificationOnUpdate)
                 {
-                    LessonsNotifier.instance.sheduldeNotificationAt(NSDate(),
+                    Notifier.i.sheduldeNotificationAt(NSDate(),
                         title:"Notifications updated",
                         message:":D")
                 }
@@ -34,21 +34,8 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
     })}
     func onAddBookmark(bookmark: Group){notificationsBlock()}
     func onRemoveBookmark(bookmark: Group){notificationsBlock()}
-    override init()
+    init()
     {
-        super.init()
-        let app=UIApplication.sharedApplication()
-        //let notificationCategory:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
-        //notificationCategory.identifier = "INVITE_CATEGORY"
-        //notificationCategory .setActions([replyAction], forContext: UIUserNotificationActionContext.Default)
-        
-        //registerting for the notification.
-        app.registerUserNotificationSettings(UIUserNotificationSettings(forTypes:[ .Sound, .Alert], categories: nil))
-        if let appname=NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as?String
-        {
-        LNNotificationCenter.defaultCenter().registerApplicationWithIdentifier("timetable",
-            name:appname, icon:UIImage(named:"AppIcon40x40")!, defaultSettings:self)
-        }
         TTDB.bookmarksListener=self
     }
     func sheduldeNotfications(shedulde:Shedulde)
@@ -64,33 +51,10 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
                     let date=lesson.start
                     if NSDate().dateByAddingTimeInterval(-600).compare(date) == .OrderedAscending
                     {
-                        self.sheduldeNotificationAt(date,title:title,message:message)
+                        Notifier.i.sheduldeNotificationAt(date,title:title,message:message)
                     }
                 }
             }
         }
-    }
-    func cancelNotifications()
-    {
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-    }
-    func sheduldeNotificationAt(alertTime:NSDate=NSDate().dateByAddingTimeInterval(10.0),
-                                title:String="!!!",message:String="!!!",
-                                repeatInterval:NSCalendarUnit = NSCalendarUnit(rawValue:0))
-    {
-        let app=UIApplication.sharedApplication()
-        let notification=UILocalNotification()
-        notification.fireDate=alertTime
-        notification.repeatInterval=repeatInterval
-        notification.alertBody=message
-        notification.alertTitle=title
-        notification.timeZone=NSTimeZone.defaultTimeZone()
-        app.scheduleLocalNotification(notification)
-        //app.presentLocalNotificationNow(notification)
-    }
-    func presentNotification(ln:UILocalNotification)
-    {
-        let n=LNNotification(title:ln.alertTitle,message:ln.alertBody)
-        LNNotificationCenter.defaultCenter().presentNotification(n, forApplicationIdentifier:"timetable")
-    }
+    }    
 }
