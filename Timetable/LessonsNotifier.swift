@@ -47,7 +47,7 @@ class LessonsNotifier:LNNotificationAppSettings,BookmarksListener
         if let appname=NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as?String
         {
         LNNotificationCenter.defaultCenter().registerApplicationWithIdentifier("timetable",
-            name:appname, icon:UIImage(named:"PolyTech")!, defaultSettings:self)
+            name:appname, icon:UIImage(named:"AppIcon40x40")!, defaultSettings:self)
         }
         TTDB.bookmarksListener=self
     }
