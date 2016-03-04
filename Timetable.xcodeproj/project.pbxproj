@@ -34,6 +34,8 @@
 		417227BC1C886AC000BAB98C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 417227B71C886AC000BAB98C /* README.md */; };
 		417227C01C8873F100BAB98C /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417227BF1C8873F100BAB98C /* Notifier.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
+		419F59EC1C89D3BF0080DB7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419F59EB1C89D3BF0080DB7F /* CoreData.framework */; };
+		419F59EF1C89D3D00080DB7F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
 		41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DD1C85E2E4008A63DA /* DDCalendarSingleDayView.m */; };
@@ -87,6 +89,9 @@
 		417227B71C886AC000BAB98C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		417227BF1C8873F100BAB98C /* Notifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		419F59E91C89D3120080DB7F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		419F59EB1C89D3BF0080DB7F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
 		41B850DA1C85E2E4008A63DA /* DDCalendarEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEventView.h; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419F59EC1C89D3BF0080DB7F /* CoreData.framework in Frameworks */,
 				1F701B33626C08EBE80725F3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,11 +186,12 @@
 				410BE3F31C78D58100E49CB9 /* Extensions.swift */,
 				410BE3E71C78C19200E49CB9 /* Faculty.swift */,
 				410BE3E91C78C3A400E49CB9 /* Group.swift */,
-				410BE3E51C78BB1300E49CB9 /* JSON.swift */,
 				410BE3F11C78CF9A00E49CB9 /* Lesson.swift */,
 				410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */,
-				410BE3E01C78A6FF00E49CB9 /* TTDB.swift */,
 				410BE3ED1C78CD5F00E49CB9 /* Week.swift */,
+				410BE3E01C78A6FF00E49CB9 /* TTDB.swift */,
+				410BE3E51C78BB1300E49CB9 /* JSON.swift */,
+				419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -335,6 +342,8 @@
 		92D1CC71505B6126E3BD676E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				419F59EB1C89D3BF0080DB7F /* CoreData.framework */,
+				419F59E91C89D3120080DB7F /* libsqlite3.tbd */,
 				B7B4CEE6540F94C57B8C6FD9 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -491,6 +500,7 @@
 				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
 				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
 				41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */,
+				419F59EF1C89D3D00080DB7F /* Model.xcdatamodeld in Sources */,
 				417227BA1C886AC000BAB98C /* CBZSplashView.m in Sources */,
 				41B850FE1C85E2E4008A63DA /* NSDate+DDCalendar.m in Sources */,
 				41B851041C85E2E4008A63DA /* README.md in Sources */,
@@ -675,6 +685,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */,
+			);
+			currentVersion = 419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 410BE3BE1C788E2500E49CB9 /* Project object */;
 }

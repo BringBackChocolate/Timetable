@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="Bookmark" syncable="YES">
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="bookmark" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="Faculty" syncable="YES">
+        <attribute name="abbr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groups" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="faculty" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="Group" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bookmark" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmark" inverseName="group" inverseEntity="Bookmark" syncable="YES"/>
+        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="groups" inverseEntity="Faculty" syncable="YES"/>
+        <relationship name="weeks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="group" inverseEntity="Week" syncable="YES"/>
+    </entity>
+    <entity name="Week" syncable="YES">
+        <attribute name="date_start" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="is_odd" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shedulde_json" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="weeks" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Faculty" positionX="-677" positionY="27" width="128" height="103"/>
+        <element name="Bookmark" positionX="-641" positionY="306" width="128" height="73"/>
+        <element name="Group" positionX="-9" positionY="102" width="128" height="163"/>
+        <element name="Week" positionX="-245" positionY="90" width="128" height="103"/>
+    </elements>
 </model>
