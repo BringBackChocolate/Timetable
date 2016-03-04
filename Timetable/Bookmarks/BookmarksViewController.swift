@@ -2,7 +2,7 @@
 //  BookmarksViewController.swift
 //  Timetable
 //
-//  Created by Maxim Usmanov (SPHERE PO) on 25/02/2016.
+//  Created by Maxim Usmanov on 25/02/2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
