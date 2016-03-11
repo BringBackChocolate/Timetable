@@ -16,7 +16,7 @@ class LessonsNotifier:BookmarksListener
         {
             if let myGroup=TTDB.bookmarks.first
             {
-                let sh=TTDB.loadSheduldeForGroup(myGroup.id)
+                let sh=TTDB.loadSheduldeForGroup(myGroup.id?.integerValue)
                 LessonsNotifier.instance.sheduldeNotfications(sh)
                 if(Settings.i.showNotificationOnUpdate)
                 {
@@ -38,23 +38,20 @@ class LessonsNotifier:BookmarksListener
     {
         TTDB.bookmarksListener=self
     }
-    func sheduldeNotfications(shedulde:Shedulde)
+    func sheduldeNotfications(shedulde:[Day])
     {
-        if let week=shedulde.week
+        for day in shedulde
         {
-            for day in week.days
+            for lesson in day.lessons
             {
-                for lesson in day.lessons
+                let message=lesson.placeString
+                let title=lesson.name
+                let date=lesson.start
+                if NSDate().dateByAddingTimeInterval(-600).compare(date) == .OrderedAscending
                 {
-                    let message=lesson.placeString
-                    let title=lesson.name
-                    let date=lesson.start
-                    if NSDate().dateByAddingTimeInterval(-600).compare(date) == .OrderedAscending
-                    {
-                        Notifier.i.sheduldeNotificationAt(date,title:title,message:message)
-                    }
+                    Notifier.i.sheduldeNotificationAt(date,title:title,message:message)
                 }
             }
         }
-    }    
+    }
 }

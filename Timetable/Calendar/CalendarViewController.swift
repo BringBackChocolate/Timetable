@@ -117,7 +117,7 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
     func CLCalendarBehaviorAttributes() -> [NSObject : AnyObject]! {
         return calendarAttributes
     }
-    func reloadShedulde(shedulde:Shedulde,forDate date:NSDate)
+    func reloadShedulde(shedulde:[],forDate date:NSDate)
     {dispatch_async(dispatch_get_global_queue(0,0),{
         let comp=NSCalendar.currentCalendar().components(NSCalendarUnit.Weekday,fromDate:date)
         if let currentDay=shedulde.week?.getDay(comp.weekday)

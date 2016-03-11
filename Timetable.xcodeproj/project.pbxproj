@@ -16,11 +16,6 @@
 		410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3DC1C78965C00E49CB9 /* Globals.swift */; };
 		410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E01C78A6FF00E49CB9 /* TTDB.swift */; };
 		410BE3E61C78BB1300E49CB9 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E51C78BB1300E49CB9 /* JSON.swift */; };
-		410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E71C78C19200E49CB9 /* Faculty.swift */; };
-		410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3E91C78C3A400E49CB9 /* Group.swift */; };
-		410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */; };
-		410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3ED1C78CD5F00E49CB9 /* Week.swift */; };
-		410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3EF1C78CF4E00E49CB9 /* Day.swift */; };
 		410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F11C78CF9A00E49CB9 /* Lesson.swift */; };
 		410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BE3F31C78D58100E49CB9 /* Extensions.swift */; };
 		4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126BB931C8725330094F9F3 /* LessonsNotifier.swift */; };
@@ -35,7 +30,16 @@
 		417227C01C8873F100BAB98C /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417227BF1C8873F100BAB98C /* Notifier.swift */; };
 		4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419764891C7DCEC3006A2837 /* SearchViewController.swift */; };
 		419F59EC1C89D3BF0080DB7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419F59EB1C89D3BF0080DB7F /* CoreData.framework */; };
-		419F59EF1C89D3D00080DB7F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */; };
+		419F59EF1C89D3D00080DB7F /* Timetable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 419F59ED1C89D3D00080DB7F /* Timetable.xcdatamodeld */; };
+		419F59F81C89D7610080DB7F /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F01C89D7610080DB7F /* Group+CoreDataProperties.swift */; };
+		419F59F91C89D7610080DB7F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F11C89D7610080DB7F /* Group.swift */; };
+		419F59FA1C89D7610080DB7F /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F21C89D7610080DB7F /* Faculty+CoreDataProperties.swift */; };
+		419F59FB1C89D7610080DB7F /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F31C89D7610080DB7F /* Faculty.swift */; };
+		419F59FC1C89D7610080DB7F /* Week+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F41C89D7610080DB7F /* Week+CoreDataProperties.swift */; };
+		419F59FD1C89D7610080DB7F /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F51C89D7610080DB7F /* Week.swift */; };
+		419F59FE1C89D7610080DB7F /* Bookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F61C89D7610080DB7F /* Bookmark+CoreDataProperties.swift */; };
+		419F59FF1C89D7610080DB7F /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F59F71C89D7610080DB7F /* Bookmark.swift */; };
+		419F5A011C89E2BE0080DB7F /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F5A001C89E2BE0080DB7F /* Day.swift */; };
 		41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */; };
 		41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DB1C85E2E4008A63DA /* DDCalendarEventView.m */; };
 		41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B850DD1C85E2E4008A63DA /* DDCalendarSingleDayView.m */; };
@@ -68,11 +72,6 @@
 		410BE3DC1C78965C00E49CB9 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		410BE3E01C78A6FF00E49CB9 /* TTDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDB.swift; sourceTree = "<group>"; };
 		410BE3E51C78BB1300E49CB9 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		410BE3E71C78C19200E49CB9 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
-		410BE3E91C78C3A400E49CB9 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shedulde.swift; sourceTree = "<group>"; };
-		410BE3ED1C78CD5F00E49CB9 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
-		410BE3EF1C78CF4E00E49CB9 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		410BE3F11C78CF9A00E49CB9 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		410BE3F31C78D58100E49CB9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4126BB931C8725330094F9F3 /* LessonsNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsNotifier.swift; sourceTree = "<group>"; };
@@ -91,7 +90,16 @@
 		419764891C7DCEC3006A2837 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		419F59E91C89D3120080DB7F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		419F59EB1C89D3BF0080DB7F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		419F59EE1C89D3D00080DB7F /* Timetable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timetable.xcdatamodel; sourceTree = "<group>"; };
+		419F59F01C89D7610080DB7F /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		419F59F11C89D7610080DB7F /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		419F59F21C89D7610080DB7F /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		419F59F31C89D7610080DB7F /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		419F59F41C89D7610080DB7F /* Week+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Week+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		419F59F51C89D7610080DB7F /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		419F59F61C89D7610080DB7F /* Bookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		419F59F71C89D7610080DB7F /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		419F5A001C89E2BE0080DB7F /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		41B850D81C85E2E4008A63DA /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
 		41B850D91C85E2E4008A63DA /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
 		41B850DA1C85E2E4008A63DA /* DDCalendarEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEventView.h; sourceTree = "<group>"; };
@@ -182,16 +190,20 @@
 		410BE3E21C78A70700E49CB9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				410BE3EF1C78CF4E00E49CB9 /* Day.swift */,
-				410BE3F31C78D58100E49CB9 /* Extensions.swift */,
-				410BE3E71C78C19200E49CB9 /* Faculty.swift */,
-				410BE3E91C78C3A400E49CB9 /* Group.swift */,
 				410BE3F11C78CF9A00E49CB9 /* Lesson.swift */,
-				410BE3EB1C78C6F900E49CB9 /* Shedulde.swift */,
-				410BE3ED1C78CD5F00E49CB9 /* Week.swift */,
+				410BE3F31C78D58100E49CB9 /* Extensions.swift */,
 				410BE3E01C78A6FF00E49CB9 /* TTDB.swift */,
 				410BE3E51C78BB1300E49CB9 /* JSON.swift */,
-				419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */,
+				419F59ED1C89D3D00080DB7F /* Timetable.xcdatamodeld */,
+				419F59F01C89D7610080DB7F /* Group+CoreDataProperties.swift */,
+				419F59F11C89D7610080DB7F /* Group.swift */,
+				419F59F21C89D7610080DB7F /* Faculty+CoreDataProperties.swift */,
+				419F59F31C89D7610080DB7F /* Faculty.swift */,
+				419F59F41C89D7610080DB7F /* Week+CoreDataProperties.swift */,
+				419F59F51C89D7610080DB7F /* Week.swift */,
+				419F59F61C89D7610080DB7F /* Bookmark+CoreDataProperties.swift */,
+				419F59F71C89D7610080DB7F /* Bookmark.swift */,
+				419F5A001C89E2BE0080DB7F /* Day.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -487,40 +499,44 @@
 				417227B91C886AC000BAB98C /* CBZRasterSplashView.m in Sources */,
 				41B850FF1C85E2E4008A63DA /* OBDragDropManager.m in Sources */,
 				41B850F71C85E2E4008A63DA /* DDCalendarEvent.m in Sources */,
+				419F59FA1C89D7610080DB7F /* Faculty+CoreDataProperties.swift in Sources */,
 				4126BB941C8725330094F9F3 /* LessonsNotifier.swift in Sources */,
 				417227C01C8873F100BAB98C /* Notifier.swift in Sources */,
 				41B850F91C85E2E4008A63DA /* DDCalendarSingleDayView.m in Sources */,
 				417227BC1C886AC000BAB98C /* README.md in Sources */,
+				419F59FF1C89D7610080DB7F /* Bookmark.swift in Sources */,
 				41B850FB1C85E2E4008A63DA /* FFHourAndMinLabel.m in Sources */,
 				DD08277E1C7F658100CE1F0B /* BookmarksViewController.swift in Sources */,
 				4126BB991C873BA30094F9F3 /* SettingsViewController.swift in Sources */,
 				41B850FC1C85E2E4008A63DA /* FFViewWithHourLines.m in Sources */,
+				419F5A011C89E2BE0080DB7F /* Day.swift in Sources */,
 				4197648A1C7DCEC3006A2837 /* SearchViewController.swift in Sources */,
 				41B850FA1C85E2E4008A63DA /* DDCalendarView.m in Sources */,
-				410BE3EA1C78C3A400E49CB9 /* Group.swift in Sources */,
-				410BE3E81C78C19200E49CB9 /* Faculty.swift in Sources */,
 				41B850F81C85E2E4008A63DA /* DDCalendarEventView.m in Sources */,
-				419F59EF1C89D3D00080DB7F /* Model.xcdatamodeld in Sources */,
+				419F59EF1C89D3D00080DB7F /* Timetable.xcdatamodeld in Sources */,
 				417227BA1C886AC000BAB98C /* CBZSplashView.m in Sources */,
 				41B850FE1C85E2E4008A63DA /* NSDate+DDCalendar.m in Sources */,
 				41B851041C85E2E4008A63DA /* README.md in Sources */,
+				419F59FD1C89D7610080DB7F /* Week.swift in Sources */,
 				410BE3CC1C788E2600E49CB9 /* CalendarViewController.swift in Sources */,
 				410BE3E61C78BB1300E49CB9 /* JSON.swift in Sources */,
+				419F59FE1C89D7610080DB7F /* Bookmark+CoreDataProperties.swift in Sources */,
 				41B851011C85E2E4008A63DA /* UIGestureRecognizer+OBDragDrop.m in Sources */,
 				410BE3F21C78CF9A00E49CB9 /* Lesson.swift in Sources */,
-				410BE3F01C78CF4E00E49CB9 /* Day.swift in Sources */,
 				41F273A01C7DE05A0057947F /* FacultiesViewController.swift in Sources */,
+				419F59FC1C89D7610080DB7F /* Week+CoreDataProperties.swift in Sources */,
 				4126BB971C87393C0094F9F3 /* Settings.swift in Sources */,
-				410BE3EC1C78C6F900E49CB9 /* Shedulde.swift in Sources */,
+				419F59F81C89D7610080DB7F /* Group+CoreDataProperties.swift in Sources */,
 				41B851001C85E2E4008A63DA /* OBLongPressDragDropGestureRecognizer.m in Sources */,
 				410BE3F41C78D58100E49CB9 /* Extensions.swift in Sources */,
+				419F59F91C89D7610080DB7F /* Group.swift in Sources */,
 				410BE3CA1C788E2600E49CB9 /* AppDelegate.swift in Sources */,
-				410BE3EE1C78CD5F00E49CB9 /* Week.swift in Sources */,
 				41B850FD1C85E2E4008A63DA /* UILabel+FFCustomMethods.m in Sources */,
 				417227BB1C886AC000BAB98C /* CBZVectorSplashView.m in Sources */,
 				410BE3E11C78A6FF00E49CB9 /* TTDB.swift in Sources */,
 				410BE3DD1C78965C00E49CB9 /* Globals.swift in Sources */,
 				417227AC1C88644400BAB98C /* SplitViewController.swift in Sources */,
+				419F59FB1C89D7610080DB7F /* Faculty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,13 +703,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		419F59ED1C89D3D00080DB7F /* Model.xcdatamodeld */ = {
+		419F59ED1C89D3D00080DB7F /* Timetable.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */,
+				419F59EE1C89D3D00080DB7F /* Timetable.xcdatamodel */,
 			);
-			currentVersion = 419F59EE1C89D3D00080DB7F /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 419F59EE1C89D3D00080DB7F /* Timetable.xcdatamodel */;
+			path = Timetable.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

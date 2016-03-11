@@ -2,23 +2,28 @@
 //  Group.swift
 //  Timetable
 //
-//  Created by Sergey Rump on 20.02.2016.
+//  Created by Sergey Rump (SPHERE) on 04.03.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
 import Foundation
-class Group : Equatable,Hashable,CustomStringConvertible
+import CoreData
+
+@objc(Group)
+class Group: NSManagedObject
 {
-    var id:Int=0
-    var name:String=""
-    var level:Int=0
-    var type:String="common"
-    var spec:String=""
-    var faculty:Faculty?
-    var hashValue:Int{return id}
-    
-    init(json:JSON)
+
+// Insert code here to add functionality to your managed object subclass
+
+    override var hashValue:Int
     {
+        if let val=self.id?.hashValue{return val}
+        return 0;
+    }
+    
+    convenience init(json:JSON)
+    {
+        self.init()
         if json["id"].isInt
         {
             id=json["id"].asInt!
@@ -51,22 +56,26 @@ class Group : Equatable,Hashable,CustomStringConvertible
         }
         return res
     }
-    var description:String{return name}
+    override var description:String
+    {
+        if let n=name{return n}
+        return ""
+    }
     var json:JSON
     {
-        var dict=[String:AnyObject]()
-        dict["id"]=id
-        dict["name"]=name
-        dict["level"]=level
-        dict["type"]=type
-        dict["spec"]=spec
-        return JSON(dict)
+            var dict=[String:AnyObject]()
+            dict["id"]=id
+            dict["name"]=name
+            dict["level"]=level
+            dict["type"]=type
+            dict["spec"]=spec
+            return JSON(dict)
     }
     var jsonString:String
-    {
-        return json.toString()
+        {
+            return json.toString()
     }
-}//http://ruz2.spbstu.ru/api/v1/ruz/scheduler/19904?date=2016-02-22
+}
 func ==(lhs: Group, rhs: Group)->Bool
 {
     return (lhs.id==rhs.id)&&(lhs.name==lhs.name)

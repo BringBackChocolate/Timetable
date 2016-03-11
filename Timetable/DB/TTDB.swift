@@ -108,7 +108,7 @@ class TTDB
         }
         return [Group]()
     }
-    static func loadSheduldeForGroup(id:Int,date:NSDate=NSDate())->Shedulde
+    static func loadSheduldeForGroup(id:Int,date:NSDate=NSDate())->[Day]
     {
         if let json=jsonFromURL(sheduldeURL(id,date:date))
         {
@@ -123,7 +123,7 @@ class TTDB
     }
     static func loadLocalSheduldeForGroup(id:Int,
                                         date:NSDate=NSDate(),
-                                    onWeb:(Shedulde)->Void={_ in})->Shedulde
+                                    onWeb:([Day])->Void={_ in})->[Day]
     {
         dispatch_async(dispatch_get_global_queue(0,0),{
             onWeb(loadSheduldeForGroup(id,date: date))

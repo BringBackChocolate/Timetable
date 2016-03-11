@@ -2,18 +2,19 @@
 //  Faculty.swift
 //  Timetable
 //
-//  Created by Sergey Rump on 20.02.2016.
+//  Created by Sergey Rump (SPHERE) on 04.03.2016.
 //  Copyright © 2016 spbstu. All rights reserved.
 //
 
 import Foundation
-class Faculty : NSObject
-{
-    var id:Int=0
-    var abbr:String=""
-    var name:String=""
-    init(json:JSON)
+import CoreData
+
+@objc(Faculty)
+class Faculty: NSManagedObject
+{// Insert code here to add functionality to your managed object subclass
+    convenience init(json:JSON)
     {
+        self.init()
         if json["id"].isInt
         {
             id=json["id"].asInt!
@@ -37,5 +38,9 @@ class Faculty : NSObject
         }
         return res
     }
-    override var description:String{return abbr}
+    override var description:String
+    {
+        if let a=abbr{return a}
+        return ""
+    }
 }

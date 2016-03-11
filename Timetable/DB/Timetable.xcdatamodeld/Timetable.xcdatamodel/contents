@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="Bookmark" syncable="YES">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES">
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="bookmark" inverseEntity="Group" syncable="YES"/>
     </entity>
-    <entity name="Faculty" syncable="YES">
+    <entity name="Faculty" representedClassName="Faculty" syncable="YES">
         <attribute name="abbr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="groups" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="faculty" inverseEntity="Group" syncable="YES"/>
     </entity>
-    <entity name="Group" syncable="YES">
+    <entity name="Group" representedClassName="Group" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +20,7 @@
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="groups" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="weeks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="group" inverseEntity="Week" syncable="YES"/>
     </entity>
-    <entity name="Week" syncable="YES">
+    <entity name="Week" representedClassName="Week" syncable="YES">
         <attribute name="date_start" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="is_odd" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="shedulde_json" optional="YES" attributeType="String" syncable="YES"/>
