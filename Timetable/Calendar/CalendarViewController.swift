@@ -9,7 +9,7 @@
 import UIKit
 class CalendarNavigationController:UINavigationController{}
 
-class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDCalendarViewDataSource,DDCalendarViewDelegate
+class CalendarViewController : TimetableVC,CLWeeklyCalendarViewDelegate,DDCalendarViewDataSource,DDCalendarViewDelegate
 {
     @IBOutlet var weekView:CLWeeklyCalendarView!
     @IBOutlet var eventsView:DDCalendarView!
@@ -118,25 +118,25 @@ class CalendarViewController : UIViewController,CLWeeklyCalendarViewDelegate,DDC
         return calendarAttributes
     }
     func reloadShedulde(shedulde:Shedulde,forDate date:NSDate)
-    {dispatch_async(dispatch_get_global_queue(0,0),{
+    {dispatch_async(dispatch_get_global_queue(0,0),{ [weak self] in
         let comp=NSCalendar.currentCalendar().components(NSCalendarUnit.Weekday,fromDate:date)
         if let currentDay=shedulde.week?.getDay(comp.weekday)
         {
-            self.showLessons(currentDay.lessons)
-        }else{self.showLessons(nil)}
-        dispatch_async(dispatch_get_main_queue(),{self.eventsView.date=date})
+            self?.showLessons(currentDay.lessons)
+        }else{self?.showLessons(nil)}
+        dispatch_async(dispatch_get_main_queue(),{self?.eventsView.date=date})
     })}
     func showLessons(l:[Lesson]?)
-    {dispatch_async(dispatch_get_main_queue(),{
+    {dispatch_async(dispatch_get_main_queue(),{ [weak self] in
         if let lessons=l
         {
-            self.selectedDayLessons=lessons
-            self.eventsView.reloadData()
+            self?.selectedDayLessons=lessons
+            self?.eventsView.reloadData()
         }
         else
         {
-            self.selectedDayLessons.removeAll()
-            self.eventsView.reloadData()
+            self?.selectedDayLessons.removeAll()
+            self?.eventsView.reloadData()
         }
     })}
     func calendarView(view: DDCalendarView, eventsForDay date: NSDate) -> [AnyObject]?

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class FacultiesViewController : UIViewController , UITableViewDataSource , UITableViewDelegate
+class FacultiesViewController : TimetableVC , UITableViewDataSource , UITableViewDelegate
 {
     var faculties=[Faculty]()
     @IBOutlet var tableView:UITableView!

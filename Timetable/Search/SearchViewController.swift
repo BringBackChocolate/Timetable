@@ -11,7 +11,7 @@ class UITableViewCellWithIcon:UITableViewCell
 {
     var iconView:UIImageView?
 }
-class SearchViewController : UIViewController , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
+class SearchViewController : TimetableVC , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
 {
     var groups=[Group]()
     var filteredGroups=[Group]()

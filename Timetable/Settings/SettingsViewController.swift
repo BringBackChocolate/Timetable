@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class SettingsViewController: UIViewController
+class SettingsViewController: TimetableVC
 {
     @IBOutlet var notificationsSw:UISwitch!
     @IBOutlet var notificationsOnUpdateSw:UISwitch!

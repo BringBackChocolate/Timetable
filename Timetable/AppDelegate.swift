@@ -8,6 +8,14 @@
 
 import UIKit
 
+class TimetableVC : UIViewController
+{
+    deinit
+    {
+        NSLog("ARC: \(self).deinit")
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UISplitViewControllerDelegate
 {

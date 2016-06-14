@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarksViewController: UIViewController , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
+class BookmarksViewController: TimetableVC , UITableViewDataSource , UITableViewDelegate, UISearchBarDelegate
 {
     //string constants
     let kEditButtonName:String = "Изменить"
